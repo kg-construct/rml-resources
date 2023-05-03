@@ -26,6 +26,9 @@ jobs:
     - name: Run tests
       run: |
         cd generator
+        echo "=== Ontology ==="
         python3 generate-ontology.py
+        echo "=== Shape ==="
         python3 generate-shape.py
+        echo "=== Backwards compatibility ==="
         python3 generate-backwards-compatibility.py
