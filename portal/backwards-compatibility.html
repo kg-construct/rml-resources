@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Requirements</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="This describes the requirements identified for the ontology">
+   <meta name="language" content="English">
+
+   <link rel="stylesheet" href="vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+   <script src="vocab/js/jquery-1.11.0.js"></script>
+   <script type="text/javascript" src="vocab/js/jquery.tablesorter.min.js"></script>
+   <script type="text/javascript" src="vocab/js/jquery.stickytableheaders.js"></script>
+   <script type="text/javascript" src="vocab/js/jquery-ui.js"></script>
+   <script type="text/javascript" src="vocab/js/bootstrap.js"></script>
+   <link rel="stylesheet" href="vocab/css/jquery-ui.css">
+   </link>
+   <script type="text/javascript" id="js">
+       $(document).ready(function()
+           {
+               $("#tablesorter-demo").tablesorter();
+               $("#tablesorter-demo").stickyTableHeaders();
+               $('[data-toggle="tooltip"]').tooltip();
+           }
+       );
+   </script>
+   <!-- Le styles -->
+   <link href="vocab/css/bootstrap.css" rel="stylesheet">
+   <style type="text/css">
+      body {
+         padding-top: 60px;
+         padding-bottom: 40px;
+      }
+   </style>
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+   <!--[if lt IE 9]>
+   <script src="../vocab/js/html5shiv.js"></script>
+   <![endif]-->
+   <!-- Fav and touch icons -->
+   <style type="text/css" media="print">
+    .tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}
+  </style>
+</head>
+<body style>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="container">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+      </div>
+      <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+            <li><a href="index.html">Ontologies</a></li>
+            <!-- <li><a href="#">Knowledge Graph Generator</a></li> -->
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">Requirements</a>
+               <ul class="dropdown-menu">
+                  <li><a href="requirements/requirements-core.html">RML Core</a></li>
+                  <li><a href="requirements/requirements-io.html">RML Source and Target</a></li>
+                  <li><a href="requirements/requirements-cc.html">RML Collections and Containers</a></li>
+                  <li><a href="requirements/requirements-fnml.html">RML FNML</a></li>
+                  <li><a href="requirements/requirements-star.html">RML-Star</a></li>
+               </ul>
+            </li>
+            <li><a href="guide.html">Guidelines</a></li>
+            <li><a href="backwards-compatibility.html">Backwards Compatibility</a></li>
+         </ul>
+      </div>
+      <!--/.nav-collapse -->
+   </div>
+</div>
+<div class="container">
+   <!-- Jumbotron -->
+   <div class="jumbotron">
+     <h1>Backwards Compatibility</h1>
+      <p class="lead">Relations between the RML Ontology and R2RML and the previous resources of RML
+   </div>
+   <hr>
+   <div class="row">
+      <div class="ui-widget">
+         <div class="col-md-8" > </div>
+      </div>
+   </div>
+   <br>
+   <!-- <div style=" height:600px; overflow:scroll;"> -->
+
+   <table id="tablesorter-demo" class="tablesorter table table-hover table-responsive" style="padding: 0px">
+      <thead class="tableFloatingHeaderOriginal" style="top: 0px; width: 619px; margin-top: 0px; left: 381.5px; z-index: 1; position: sticky;">
+      <tr>
+         <th class="col-md-1">Prefix</th>
+         <th class="col-md-2">Namespace</th>
+      </tr>
+      </thead>
+      <tbody>
+         <tr>
+           <td>rml:</td>
+           <td><a href="http://w3id.org/rml/">http://w3id.org/rml/</a></td>
+         </tr>
+         <tr>
+           <td>rr:</td>
+           <td><a href="http://www.w3.org/ns/r2rml#">http://www.w3.org/ns/r2rml#</a></td>
+         </tr>
+         <tr>
+           <td>oldrml:</td>
+           <td><a href="http://semweb.mmlab.be/ns/rml#">http://semweb.mmlab.be/ns/rml#</a></td>
+         </tr>
+         <tr>
+           <td>ql:</td>
+           <td><a href="http://semweb.mmlab.be/ns/ql#">http://semweb.mmlab.be/ns/ql#</a></td>
+         </tr>
+     </tbody>
+   </table>
+
+
+      <table id="tablesorter-demo" class="tablesorter table table-hover table-responsive" style="padding: 0px">
+         <thead class="tableFloatingHeaderOriginal" style="top: 0px; width: 619px; margin-top: 0px; left: 381.5px; z-index: 1; position: sticky;">
+         <tr>
+            <th class="col-md-1">Previous Resource</th>
+            <th class="col-md-2">Relationship</th>
+            <th class="col-md-2">New Resource</th>
+            <th class="col-md-1">Module</th>
+         </tr>
+
+         </thead>
+         <tbody>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:BlankNode</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:BlankNode</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:TermMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:TermMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:GraphMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:GraphMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=3 style='mso-ignore:colspan'></td>
+            <td class=xl64></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:ObjectMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:ObjectMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=3 style='mso-ignore:colspan'></td>
+            <td class=xl64></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:PredicateMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:PredicateMa<span style='display:none'>p</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:SubjectMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:SubjectMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:IRI</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:IRI</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:Join</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:Join</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:Literal</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:Literal</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:PredicateObjectMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:PredicateOb<span style='display:none'>jectMap</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:RefObjectMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:RefObjectM<span style='display:none'>ap</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:TriplesMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:TriplesMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>oldrml:TriplesMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:TriplesMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:logicalTable</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:logicalSourc<span style='display:none'>e</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:class</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:class</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:constant</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:constant</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:datatype</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:datatype</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:graph</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:graph</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:graphMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:graphMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:joinCondition</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:joinCondition</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:logicalTable</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:logicalSourc<span style='display:none'>e</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>oldrml:logicalSource</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:logicalSourc<span style='display:none'>e</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:object</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:object</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:objectMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:objectMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:parentTriplesMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:parentTriple<span style='display:none'>sMap</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:predicate</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:predicate</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:predicateMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:predicateMa<span style='display:none'>p</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:predicateObjectMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:predicateObj<span style='display:none'>ectMap</span></td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:subject</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:subject</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:subjectMap</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:subjectMap</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:termType</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:termType</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:column</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:reference</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:child</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:child</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:parent</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:parent</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>oldrml:reference</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:reference</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:template</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:reference</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:language</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:language</td>
+            <td class=xl64>RML-Core</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>oldrml:LogicalSource</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl64>rml:LogicalSour<span style='display:none'>ce</span></td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:LogicalTable</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:LogicalSour<span style='display:none'>ce</span></td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>oldrml:BaseSource</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:LogicalSour<span style='display:none'>ce</span></td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:BaseTableOrView</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:LogicalSour<span style='display:none'>ce</span></td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:R2RMLView</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:LogicalSour<span style='display:none'>ce</span></td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:sqlVersion</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:referenceFor<span style='display:none'>mulation</span></td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:tableName</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:source</td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>rr:sqlQuery</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:query</td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>oldrml:source</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl65>rml:source</td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>oldrml:iterator</td>
+            <td class=xl64>equivalent to</td>
+            <td class=xl65>rml:iterator</td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl64 style='height:15.75pt'>ql:XPath</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl65>rml:XPath</td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=20 style='mso-height-source:userset;height:15.75pt'>
+            <td height=20 class=xl65 style='height:15.75pt'>ql:JSONPath</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl65>rml:JSONPath</td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=17 style='height:13.0pt'>
+            <td height=17 class=xl64 style='height:13.0pt'>ql:CSV</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:CSV</td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+           <tr height=17 style='height:13.0pt'>
+            <td height=17 class=xl64 style='height:13.0pt'>rr:SQL2008</td>
+            <td class=xl64>replaced by</td>
+            <td class=xl64>rml:SQL2008</td>
+            <td class=xl64>RML-IO</td>
+            <td colspan=4 style='mso-ignore:colspan'></td>
+           </tr>
+        </tbody>
+      </table>
+   <!-- </div> -->
+   <hr>
+   <footer class="footer">
+     <div class="row">
+       <div class="col-md-10">
+         Developed by <a href="https://oeg.fi.upm.es/" target="_blank">Ontology Engineering Group</a>
+         <br>
+         Page created with  <a href = "https://github.com/dgarijo/vocabLite" target="_blank">VocabLite</a>
+         <br>
+         Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+         Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>
+         <br>
+         Latest revision May, 2023
+         <br>
+         <p>&copy; Ontology Engineering Group</p>
+       </div>
+       <div class="col-md-2">
+         <a href="https://oeg.fi.upm.es/" target="_blank"><img src="vocab/images/logoOEG.gif" alt="OEG logo" class="img-rounded"
+                                                               class="img-responsive" width="30%" /></a>
+
+         <a href="http://fi.upm.es/" target="_blank"><img src="vocab/images/fiLogo.png" alt="FI logo" class="img-rounded"
+                                                              class="img-responsive" width="25%" /></a>
+
+         <a href="https://www.upm.es/" target="_blank"><img src="vocab/images/upmlogo.png" alt="UPM logo" class="img-rounded"
+                                                                class="img-responsive" width="30%" /></a>
+       </div>
+     </div>
+   </footer>
+</div>
+<!-- /container -->

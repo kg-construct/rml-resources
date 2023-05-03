@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Requirements</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="This describes the requirements identified for the ontology">
+   <meta name="language" content="English">
+
+   <link rel="stylesheet" href="../vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+   <script src="../vocab/js/jquery-1.11.0.js"></script>
+   <script type="text/javascript" src="../vocab/js/jquery.tablesorter.min.js"></script>
+   <script type="text/javascript" src="../vocab/js/jquery.stickytableheaders.js"></script>
+   <script type="text/javascript" src="../vocab/js/jquery-ui.js"></script>
+   <script type="text/javascript" src="../vocab/js/bootstrap.js"></script>
+   <link rel="stylesheet" href="../vocab/css/jquery-ui.css">
+   </link>
+   <script type="text/javascript" id="js">
+       $(document).ready(function()
+           {
+               $("#tablesorter-demo").tablesorter();
+               $("#tablesorter-demo").stickyTableHeaders();
+               $('[data-toggle="tooltip"]').tooltip();
+           }
+       );
+   </script>
+   <!-- Le styles -->
+   <link href="../vocab/css/bootstrap.css" rel="stylesheet">
+   <style type="text/css">
+      body {
+         padding-top: 60px;
+         padding-bottom: 40px;
+      }
+   </style>
+   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+   <!--[if lt IE 9]>
+   <script src="../vocab/js/html5shiv.js"></script>
+   <![endif]-->
+   <!-- Fav and touch icons -->
+   <style type="text/css" media="print">
+    .tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}
+  </style>
+</head>
+<body style>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="container">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+      </div>
+      <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav">
+            <li><a href="../index.html">Ontologies</a></li>
+            <!-- <li><a href="#">Knowledge Graph Generator</a></li> -->
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">Requirements</a>
+               <ul class="dropdown-menu">
+                  <li><a href="./requirements-core.html">RML Core</a></li>
+                  <li><a href="./requirements-io.html">RML Source and Target</a></li>
+                  <li><a href="./requirements-cc.html">RML Collections and Containers</a></li>
+                  <li><a href="./requirements-fnml.html">RML FNML</a></li>
+                  <li><a href="./requirements-star.html">RML-Star</a></li>
+               </ul>
+            </li>
+            <li><a href="../guide.html">Guidelines</a></li>
+            <li><a href="../backwards-compatibility.html">Backwards Compatibility</a></li>
+         </ul>
+      </div>
+      <!--/.nav-collapse -->
+   </div>
+</div>
+<div class="container">
+   <!-- Jumbotron -->
+   <div class="jumbotron">
+     <h1>RML-CC: Collections and Containers</h1>
+      <p class="lead">Here you can find the list of the requirements identified for the RML Collections and Containers module and its main features.
+   </div>
+   <hr>
+   <div class="row">
+      <div class="ui-widget">
+         <div class="col-md-8" > </div>
+      </div>
+   </div>
+   <br>
+   <!-- <div style=" height:600px; overflow:scroll;"> -->
+      <table id="tablesorter-demo" class="tablesorter table table-hover table-responsive" style="padding: 0px">
+         <thead class="tableFloatingHeaderOriginal" style="top: 0px; width: 619px; margin-top: 0px; left: 381.5px; z-index: 1; position: sticky;">
+           <tr>
+              <th class="col-md-1">Identifier</th>
+              <th class="col-md-2">Requirement</th>
+              <th class="col-md-1">Provenance</th>
+           </tr>
+
+         </thead>
+         <tbody>
+           <tr height=23 style='height:17.0pt'>
+            <td height=23 style='height:17.0pt'>rml-cc-r1</td>
+            <td class=xl64 width=308 style='width:231pt'>Collect values from one or more
+            term maps</td>
+            <td>rml-cc &amp; Mapping Challenge C4</td>
+           </tr>
+           <tr height=45 style='height:34.0pt'>
+            <td height=45 style='height:34.0pt'>rml-cc-r2</td>
+            <td class=xl64 width=308 style='width:231pt'>Enable the generation of
+            multi-valued term maps</td>
+            <td>rml-cc &amp; Mapping Challenge C4</td>
+           </tr>
+           <tr height=45 style='height:34.0pt'>
+            <td height=45 style='height:34.0pt'>rml-cc-r3</td>
+            <td class=xl64 width=308 style='width:231pt'>Enable the control over the
+            generation of empty collections and containers</td>
+            <td>rml-cc</td>
+           </tr>
+           <tr height=23 style='height:17.0pt'>
+            <td height=23 style='height:17.0pt'>rml-cc-r4</td>
+            <td class=xl64 width=308 style='width:231pt'>Group different term types</td>
+            <td>rml-cc &amp; Mapping Challenge C4</td>
+           </tr>
+           <tr height=45 style='height:34.0pt'>
+            <td height=45 style='height:34.0pt'>rml-cc-r5</td>
+            <td class=xl64 width=308 style='width:231pt'>Use a generated collection or
+            container as subject</td>
+            <td>rml-cc</td>
+           </tr>
+           <tr height=45 style='height:34.0pt'>
+            <td height=45 style='height:34.0pt'>rml-cc-r6</td>
+            <td class=xl64 width=308 style='width:231pt'>Assign an IRI or blank node
+            identifier to a collection or container</td>
+            <td>rml-cc</td>
+           </tr>
+        </tbody>
+      </table>
+   <!-- </div> -->
+   <hr>
+   <footer class="footer">
+     <div class="row">
+       <div class="col-md-10">
+         Developed by <a href="https://oeg.fi.upm.es/" target="_blank">Ontology Engineering Group</a>
+         <br>
+         Page created with  <a href = "https://github.com/dgarijo/vocabLite" target="_blank">VocabLite</a>
+         <br>
+         Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+         Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>
+         <br>
+         Latest revision May, 2023
+         <br>
+         <p>&copy; Ontology Engineering Group</p>
+       </div>
+       <div class="col-md-2">
+         <a href="https://oeg.fi.upm.es/" target="_blank"><img src="../vocab/images/logoOEG.gif" alt="OEG logo" class="img-rounded"
+                                                               class="img-responsive" width="30%" /></a>
+
+         <a href="http://fi.upm.es/" target="_blank"><img src="../vocab/images/fiLogo.png" alt="FI logo" class="img-rounded"
+                                                              class="img-responsive" width="25%" /></a>
+
+         <a href="https://www.upm.es/" target="_blank"><img src="../vocab/images/upmlogo.png" alt="UPM logo" class="img-rounded"
+                                                                class="img-responsive" width="30%" /></a>
+       </div>
+     </div>
+   </footer>
+</div>
+<!-- /container -->
