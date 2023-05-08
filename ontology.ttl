@@ -36,9 +36,9 @@ rml:AssertedTriplesMap a owl:Class ;
 rml:CSV a rml:ReferenceFormulation,
         owl:NamedIndividual ;
     rdfs:label "CSV" ;
-    rml:specification <http://tools.ietf.org/html/rfc4180> ;
     rdfs:comment "Denotes that the CSV file's column names are used for referring to extracts of CSV resources."@en ;
-    rdfs:isDefinedBy <http://w3id.org/rml/io/> .
+    rdfs:isDefinedBy <http://w3id.org/rml/io/> ;
+    rdfs:seeAlso <http://tools.ietf.org/html/rfc4180> .
 
 rml:JSONPath a rml:ReferenceFormulation,
         owl:NamedIndividual ;
@@ -73,9 +73,9 @@ rml:UTF-8 a rml:Encoding,
 rml:XPath a rml:ReferenceFormulation,
         owl:NamedIndividual ;
     rdfs:label "XPath" ;
-    rml:specification <http://www.w3.org/TR/xpath20/> ;
     rdfs:comment "Denotes the XPath reference formulation, used for referring to extracts of XML sources."@en ;
-    rdfs:isDefinedBy <http://w3id.org/rml/io/> .
+    rdfs:isDefinedBy <http://w3id.org/rml/io/> ;
+    rdfs:seeAlso <http://www.w3.org/TR/xpath20/> .
 
 rml:allowEmptyListAndContainer a owl:DatatypeProperty ;
     rdfs:label "allow empty list and container" ;
