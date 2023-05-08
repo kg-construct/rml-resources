@@ -15,8 +15,8 @@ TEMP_DIR = tempfile.gettempdir()
 SHAPE_URLS = {
 #    'core.ttl': 'https://kg-construct.github.io/rml-core/shapes/core.ttl',
     'io.ttl':   'https://kg-construct.github.io/rml-io/shapes/io.ttl',
-#    'cc.ttl':   'https://kg-construct.github.io/rml-cc/shapes/cc.ttl',
-#    'fnml.ttl': 'https://kg-construct.github.io/rml-fnml/shapes/fnml.ttl',
+    'cc.ttl':   'https://kg-construct.github.io/rml-cc/shapes/cc.ttl',
+    'fnml.ttl': 'https://kg-construct.github.io/rml-fnml/shapes/fnml.ttl',
     'star.ttl': 'https://kg-construct.github.io/rml-star/shapes/star.ttl',
 }
 SHAPE_FILE = '../shapes.ttl'

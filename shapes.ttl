@@ -85,22 +85,231 @@
     sh:targetClass rml:LogicalTarget ;
     sh:targetObjectsOf rml:logicalTarget .
 
-<http://schema.org/RMLNonAssertedTriplesMapShape> a sh:NodeShape ;
-    sh:and ( <http://schema.org/RMLTriplesMapPropertiesShape> [ ] ) ;
+<http://w3id.org/rml/shapes/RMLAssertedAndNonTriplesMapPropertiesShape> a sh:NodeShape ;
+    sh:and ( [ sh:maxCount 1 ;
+                sh:message """
+            Exactly one Predicate Object Map must be specified in the
+            Triples Map referenced by rml:quotedTriplesMap.
+            """ ;
+                sh:minCount 1 ;
+                sh:path rml:predicateObjectMap ] [ sh:message """
+            rml:quotedTriplesMap expects either a rml:AssertedTriplesMap 
+            or rml:NonAssertedTriplesMap.
+            """ ;
+                sh:or ( [ sh:node <http://w3id.org/rml/shapes/RMLAssertedTriplesMapShape> ] [ sh:node <http://w3id.org/rml/shapes/RMLNonAssertedTriplesMapShape> ] ) ] [ sh:alternativePath ( rml:AssertedTriplesMap rml:NonAssertedTriplesMap ) ;
+                sh:maxCount 1 ;
+                sh:message """
+            Either a rml:AssertedTriplesMap or rml:NonAssertedTriplesMap,
+            but not both.
+            """ ;
+                sh:minCount 1 ;
+                sh:path rdf:type ] ) ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:targetClass rml:AssertedTriplesMap,
+        rml:NonAssertedTriplesMap ;
+    sh:targetObjectsOf rml:quotedTriplesMap .
+
+<http://w3id.org/rml/shapes/RMLFunctionExecutionShape> a sh:NodeShape ;
     sh:description """
-    Represents a Non Asserted Triples Map.
+    Represents a Function Execution.
+    """ ;
+    sh:name "rml:FunctionExecution" ;
+    sh:property [ sh:description """
+        Exactly one rml:function or rml:functionMap is required.
+        """ ;
+            sh:maxCount 1 ;
+            sh:message """
+        Exactly one rml:function or rml:functionMap is required.
+        """ ;
+            sh:minCount 1 ;
+            sh:name "rml:function/rml:functionMap" ;
+            sh:path [ sh:alternativePath ( rml:function rml:functionMap ) ] ],
+        [ sh:description """
+        FnO function to execute.
+        """ ;
+            sh:message """
+        rml:functionMap must be an IRI or Blank node.
+        """ ;
+            sh:name "rml:functionMap" ;
+            sh:node <http://w3id.org/rml/shapes/RMLFunctionMap> ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path rml:functionMap ],
+        [ sh:description """
+        FnO function to execute.
+        """ ;
+            sh:message """
+        rml:function must be an IRI.
+        """ ;
+            sh:name "rml:function" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rml:function ],
+        [ sh:description """
+        Input parameters for the function.
+        """ ;
+            sh:message """
+        rml:input must be an IRI or Blank node.
+        """ ;
+            sh:name "rml:input" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path rml:input ] ;
+    sh:targetObjectsOf rml:functionExecution .
+
+<http://w3id.org/rml/shapes/RMLFunctionMapShape> a sh:NodeShape ;
+    sh:and ( <http://w3id.org/rml/shapes/RMLTermMapShape> <http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape> [ ] ) ;
+    sh:description """
+    Represents a Function Map.
+    """ ;
+    sh:name "FunctionMap" ;
+    sh:targetObjectsOf rml:functionMap .
+
+<http://w3id.org/rml/shapes/RMLGatherMapShape> a sh:NodeShape ;
+    sh:and ( <http://w3id.org/rml/shapes/RMLTermMapShape> <http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape> [ sh:description """
+            rml:strategy specifies the collection strategy to use: rml:append
+            or rml:catessianProduct. rml:append is the default strategy.
+            """ ;
+                sh:maxCount 1 ;
+                sh:message """
+            Zero or one rml:strategy is required.
+            """ ;
+                sh:minCount 0 ;
+                sh:name "strategy" ;
+                sh:node <http://w3id.org/rml/shapes/RMLStrategyAppendShape> ;
+                sh:nodeKind sh:IRI ;
+                sh:path rml:strategy ] [ sh:description """
+            rml:gatherAs specifies how to gather the collection e.g. a rdf:Alt,
+            rdf:List, rdf:Bag, or rdf:Seq.
+            """ ;
+                sh:in ( rdf:Alt rdf:List rdf:Bag rdf:Seq ) ;
+                sh:maxCount 1 ;
+                sh:message """
+            One rml:gatherAs is required.
+            """ ;
+                sh:minCount 1 ;
+                sh:name "gatherAs" ;
+                sh:nodeKind sh:IRI ;
+                sh:path rml:gatherAs ] [ sh:datatype xsd:boolean ;
+                sh:description """
+            Defines the behavior when the collection is empty. True will generate
+            a rdf:nil for a RDF collection or a resource with no members for an RDF
+            container. False will not generate any collection or container.
+            Default is false.
+            """ ;
+                sh:maxCount 1 ;
+                sh:message """
+            Zero or one rml:allowEmptyListAndContainer is required with datatype
+            xsd:boolean.
+            """ ;
+                sh:minCount 0 ;
+                sh:name "allowEmptyListAndContainer" ;
+                sh:nodeKind sh:Literal ;
+                sh:path rml:allowEmptyListAndContainer ] [ sh:description """
+            RML Term Maps to gather in the collection or container.
+            """ ;
+                sh:message """
+            one or more rml:gather properties are needed, each pointing to a
+            RML Term Map.
+            """ ;
+                sh:minCount 1 ;
+                sh:name "gather" ;
+                sh:nodeKind sh:BlankNodeOrIRI ;
+                sh:path rml:gather ] ) ;
+    sh:description """
+    Represents a Gather Map.
     """ ;
     sh:message """
-    Non Asserted Triples Map requires exactly one rml:subject or 
-    one rml:subjectMap and zero or more rml:predicateObjectMaps
-    and exactly one rml:logicalSource.
-    """,
-        "NonAssertedTriplesMap" ;
-    sh:targetClass rml:NonAssertedTriplesMap .
+    Gather Map requires one rml:strategy, one rml:gatherAs, and a list of
+    Term Map with rml:gather.
+    """ ;
+    sh:name "GatherMap" .
 
-<http://schema.org/RMLStarMapShape> a sh:NodeShape ;
-    sh:and ( <http://schema.org/RMLJoinConditionPropertiesShape> [ sh:description """
-            An quoted TriplesMap element to generate a RDF-star triple as 
+<http://w3id.org/rml/shapes/RMLInputShape> a sh:NodeShape ;
+    sh:description """
+    Represents an Input for a function.
+    """ ;
+    sh:name "rml:Input" ;
+    sh:property [ sh:description """
+        Exactly one rml:parameter or rml:parameterMap is required.
+        """ ;
+            sh:maxCount 1 ;
+            sh:message """
+        Exactly one rml:parameter or rml:parameterMap is required.
+        """ ;
+            sh:minCount 1 ;
+            sh:name "rml:parameter/rml:parameterMap" ;
+            sh:path [ sh:alternativePath ( rml:parameter rml:parameterMap ) ] ],
+        [ sh:description """
+        Values of the parameters.
+        """ ;
+            sh:maxCount 1 ;
+            sh:message """
+        rml:inputValueMap must be an IRI or Blank node, provided once.
+        """ ;
+            sh:name "rml:inputValueMap" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path rml:inputValueMap ],
+        [ sh:datatype xsd:string ;
+            sh:description """
+        Parameters to supply to FnO function.
+        """ ;
+            sh:maxCount 1 ;
+            sh:message """
+        rml:inputValue must be a string Literal.
+        """ ;
+            sh:name "rml:inputValue" ;
+            sh:nodeKind sh:Literal ;
+            sh:path rml:inputValue ],
+        [ sh:description """
+        Parameters to supply to FnO function.
+        """ ;
+            sh:maxCount 1 ;
+            sh:message """
+        rml:parameterMap must be an IRI or Blank node.
+        """ ;
+            sh:name "rml:parameterMap" ;
+            sh:node <http://w3id.org/rml/shapes/RMLParameterMap> ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path rml:parameterMap ],
+        [ sh:description """
+        Parameters to supply to FnO function.
+        """ ;
+            sh:maxCount 1 ;
+            sh:message """
+        rml:parameter must be an IRI.
+        """ ;
+            sh:name "rml:parameter" ;
+            sh:nodeKind sh:IRI ;
+            sh:path rml:parameter ],
+        [ sh:description """
+        Exactly one rml:inputValue or rml:inputValueMap is required.
+        """ ;
+            sh:maxCount 1 ;
+            sh:message """
+        Exactly one rml:inputValue or rml:inputValueMap is required.
+        """ ;
+            sh:minCount 1 ;
+            sh:name "rml:inputValue/rml:inputValueMap" ;
+            sh:path [ sh:alternativePath ( rml:inputValue rml:inputValueMap ) ] ] ;
+    sh:targetObjectsOf rml:input .
+
+<http://w3id.org/rml/shapes/RMLParameterMapShape> a sh:NodeShape ;
+    sh:and ( <http://w3id.org/rml/shapes/RMLTermMapShape> <http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape> [ ] ) ;
+    sh:description """
+    Represents a Parameter Map of a function.
+    """ ;
+    sh:name "ParameterMap" ;
+    sh:targetObjectsOf rml:parameterMap .
+
+<http://w3id.org/rml/shapes/RMLReturnMapShape> a sh:NodeShape ;
+    sh:and ( <http://w3id.org/rml/shapes/RMLTermMapShape> <http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape> [ ] ) ;
+    sh:description """
+    Represents a Return Map.
+    """ ;
+    sh:name "ReturnMap" ;
+    sh:targetObjectsOf rml:returnMap .
+
+<http://w3id.org/rml/shapes/RMLStarMapShape> a sh:NodeShape ;
+    sh:and ( <http://w3id.org/rml/shapes/RMLJoinConditionPropertiesShape> [ sh:description """
+            An Quoted Triples Map element to generate a RDF-star triple as 
             subject or object or another triple from a logical source record.
             """ ;
                 sh:maxCount 1 ;
@@ -110,7 +319,14 @@
                 sh:minCount 1 ;
                 sh:name "quotedTriplesMap" ;
                 sh:nodeKind sh:BlankNodeOrIRI ;
-                sh:path rml:quotedTriplesMap ] ) ;
+                sh:path rml:quotedTriplesMap ] [ sh:message """
+            An Quoted Triples Map may never be used for generating a predicate.
+            """ ;
+                sh:name "PredicateMap" ;
+                sh:targetObjectsOf rml:predicateObjectMap ;
+                sh:xone ( [ sh:minCount 1 ;
+                            sh:path rml:predicate ] [ sh:minCount 1 ;
+                            sh:path rml:predicateMap ] ) ] ) ;
     sh:description """
     Represents a Star Map.
     """ ;
@@ -246,7 +462,47 @@
     sh:targetClass rml:Target ;
     sh:targetObjectsOf rml:target .
 
-<http://schema.org/RMLJoinConditionPropertiesShape> a sh:NodeShape .
+<http://w3id.org/rml/shapes/RMLAssertedTriplesMapShape> a sh:NodeShape ;
+    sh:and ( <http://w3id.org/rml/shapes/RMLTriplesMapPropertiesShape> [ sh:message """
+            Asserted Triples Map must have a rml:AssertedTriplesMap type.
+            """ ;
+                sh:path rdf:type ;
+                sh:value rml:AssertedTriplesMap ] ) ;
+    sh:description """
+    Represents a Asserted Triples Map.
+    """ ;
+    sh:message """
+    Asserted Triples Map requires exactly one rml:subject or 
+    one rml:subjectMap and zero or more rml:predicateObjectMaps
+    and exactly one rml:logicalSource.
+    """,
+        "AssertedTriplesMap" ;
+    sh:targetClass rml:AssertedTriplesMap .
 
-<http://schema.org/RMLTriplesMapPropertiesShape> a sh:NodeShape .
+<http://w3id.org/rml/shapes/RMLJoinConditionPropertiesShape> a sh:NodeShape .
+
+<http://w3id.org/rml/shapes/RMLNonAssertedTriplesMapShape> a sh:NodeShape ;
+    sh:and ( <http://w3id.org/rml/shapes/RMLTriplesMapPropertiesShape> [ sh:message """
+            Non Asserted Triples Map must have a rml:NonAssertedTriplesMap type.
+            """ ;
+                sh:path rdf:type ;
+                sh:value rml:NonAssertedTriplesMap ] ) ;
+    sh:description """
+    Represents a Non Asserted Triples Map.
+    """ ;
+    sh:message """
+    Non Asserted Triples Map requires exactly one rml:subject or 
+    one rml:subjectMap and zero or more rml:predicateObjectMaps
+    and exactly one rml:logicalSource.
+    """,
+        "NonAssertedTriplesMap" ;
+    sh:targetClass rml:NonAssertedTriplesMap .
+
+<http://w3id.org/rml/shapes/RMLStrategyAppendShape> a sh:NodeShape .
+
+<http://w3id.org/rml/shapes/RMLTriplesMapPropertiesShape> a sh:NodeShape .
+
+<http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape> a sh:NodeShape .
+
+<http://w3id.org/rml/shapes/RMLTermMapShape> a sh:NodeShape .
 

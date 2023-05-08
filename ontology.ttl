@@ -27,6 +27,12 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 
+rml:AssertedTriplesMap a owl:Class ;
+    rdfs:label "Asserted Triples Map" ;
+    rdfs:comment "A type of Triples Map that is quoted and asserted in the resulting graph."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/star/> ;
+    rdfs:subClassOf rml:TriplesMap .
+
 rml:CSV a rml:ReferenceFormulation,
         owl:NamedIndividual ;
     rdfs:label "CSV" ;
@@ -42,7 +48,7 @@ rml:JSONPath a rml:ReferenceFormulation,
 
 rml:NonAssertedTriplesMap a owl:Class ;
     rdfs:label "Non Asserted Triples Map" ;
-    rdfs:comment "A type of Triples Map that is not asserted in the resulting graph"@en ;
+    rdfs:comment "A type of Triples Map that is quoted but not asserted in the resulting graph"@en ;
     rdfs:isDefinedBy <http://w3id.org/rml/star/> ;
     rdfs:subClassOf rml:TriplesMap .
 
@@ -106,6 +112,27 @@ rml:encoding a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> ;
     rdfs:range rml:Encoding .
 
+rml:function a owl:ObjectProperty ;
+    rdfs:label "function" ;
+    rdfs:comment "Specifies a data transformation function."@en ;
+    rdfs:domain rml:FunctionExecution ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rdfs:Resource .
+
+rml:functionExecution a owl:ObjectProperty ;
+    rdfs:label "function execution" ;
+    rdfs:comment "Denotes the execution of a function with its required input parameters and values."@en ;
+    rdfs:domain rml:ExpressionMap ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rml:FunctionExecution .
+
+rml:functionMap a owl:ObjectProperty ;
+    rdfs:label "function map" ;
+    rdfs:comment "A Function Map element to generate the data transformation function."@en ;
+    rdfs:domain rml:Input ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rml:FunctionMap .
+
 rml:gather a owl:ObjectProperty ;
     rdfs:label "gather" ;
     rdfs:comment "Specifies where the terms of a collection or container come from."@en ;
@@ -125,6 +152,26 @@ rml:gzip a rml:Compression,
     rdfs:label "GZip" ;
     rdfs:comment "Represents GZip file compression."@en ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> .
+
+rml:input a owl:ObjectProperty ;
+    rdfs:label "input" ;
+    rdfs:comment "Specifies the Input element of a Function Map."@en ;
+    rdfs:domain rml:FunctionExecution ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rml:Input .
+
+rml:inputValue a owl:ObjectProperty ;
+    rdfs:label "value" ;
+    rdfs:comment "Specifies the value of a parameter of a function."@en ;
+    rdfs:domain rml:Input ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> .
+
+rml:inputValueMap a owl:ObjectProperty ;
+    rdfs:label "value map" ;
+    rdfs:comment "A Value map element to generate the value of a parameter of a function."@en ;
+    rdfs:domain rml:Input ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rml:TermMap .
 
 rml:iterator a owl:ObjectProperty ;
     rdfs:label "iterator" ;
@@ -160,6 +207,20 @@ rml:null a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> ;
     rdfs:range rdf:Literal .
 
+rml:parameter a owl:ObjectProperty ;
+    rdfs:label "parameter" ;
+    rdfs:comment "Specifies the parameter of a function."@en ;
+    rdfs:domain rml:Input ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rdfs:Resource .
+
+rml:parameterMap a owl:ObjectProperty ;
+    rdfs:label "parameter map" ;
+    rdfs:comment "A Parameter Map element to generate the parameter of a function."@en ;
+    rdfs:domain rml:Input ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rml:ParameterMap .
+
 rml:query a owl:ObjectProperty ;
     rdfs:label "query" ;
     rdfs:comment "Defines which query should be applied on the source during access"@en ;
@@ -180,6 +241,20 @@ rml:referenceFormulation a owl:ObjectProperty ;
     rdfs:domain rml:LogicalSource ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> ;
     rdfs:range rml:ReferenceFormulation .
+
+rml:return a owl:ObjectProperty ;
+    rdfs:label "return" ;
+    rdfs:comment "Specifies the return output of a function."@en ;
+    rdfs:domain rml:ExpressionMap ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rdfs:Resource .
+
+rml:returnMap a owl:ObjectProperty ;
+    rdfs:label "return map" ;
+    rdfs:comment "A Return Map element to generate the return output of a function."@en ;
+    rdfs:domain rml:ExpressionMap ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:range rml:ReturnMap .
 
 rml:serialization a owl:ObjectProperty ;
     rdfs:label "serialization" ;
@@ -224,6 +299,24 @@ rml:zip a rml:Compression,
 
 foaf:name a owl:AnnotationProperty .
 
+rml:FunctionMap a owl:Class ;
+    rdfs:label "Function Map" ;
+    rdfs:comment "Represents a function map."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:subClassOf rml:TermMap .
+
+rml:ParameterMap a owl:Class ;
+    rdfs:label "Parameter Map" ;
+    rdfs:comment "Represents a parameter map."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:subClassOf rml:TermMap .
+
+rml:ReturnMap a owl:Class ;
+    rdfs:label "Return Map" ;
+    rdfs:comment "Represents a return map."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> ;
+    rdfs:subClassOf rml:TermMap .
+
 rml:StarMap a owl:Class ;
     rdfs:label "Star Map" ;
     rdfs:comment "Represents a star map able to generate RDF-star triples."@eb ;
@@ -244,6 +337,11 @@ rml:Encoding a owl:Class ;
     rdfs:label "Encoding class" ;
     rdfs:comment "Represents encoding formats."@en ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> .
+
+rml:FunctionExecution a owl:Class ;
+    rdfs:label "Function Execution" ;
+    rdfs:comment "Represents a function execution."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> .
 
 rml:GatherMap a owl:Class ;
     rdfs:label "Gather Map" ;
@@ -287,6 +385,11 @@ rml:Source a owl:Class ;
     rdfs:comment "Denotes a source."@en ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> .
 
+rml:Input a owl:Class ;
+    rdfs:label "Input" ;
+    rdfs:comment "Represents a input for an execution."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/fnml/> .
+
 rml:ReferenceFormulation a owl:Class ;
     rdfs:label "Reference Formulation" ;
     rdfs:comment "Denotes a Reference Formulation."@en ;
@@ -300,6 +403,15 @@ rml:ReferenceFormulation a owl:Class ;
     dc:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dc:modified "2023-04-19" ;
     dc:title "RML-Containers"@en .
+
+<http://w3id.org/rml/fnml/> a owl:Ontology ;
+    dc:contributor "Ana Iglesias Molina",
+        "Ben de Meester",
+        "Samaneh Jozashoori" ;
+    dc:description "RML-FNML provides data transformations for generating knowledge graphs from (semi-)structured data"@en ;
+    dc:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    dc:modified "2023-04-19" ;
+    dc:title "RML-FNML"@en .
 
 <http://w3id.org/rml/io/> a owl:Ontology ;
     dc:contributor "Ana Iglesias Molina",
