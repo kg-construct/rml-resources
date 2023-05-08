@@ -13,7 +13,7 @@ from rdflib import Graph, Namespace
 
 TEMP_DIR = tempfile.gettempdir()
 ONTOLOGY_URLS = {
-#    'core.owl': 'https://kg-construct.github.io/rml-core/ontology/rml-core.owl',
+    'core.owl': 'https://kg-construct.github.io/rml-core/ontology/rml-core.owl',
     'io.owl':   'https://kg-construct.github.io/rml-io/ontology/rml-io.owl',
     'cc.owl':   'https://kg-construct.github.io/rml-cc/ontology/rml-cc.owl',
     'fnml.owl': 'https://kg-construct.github.io/rml-fnml/ontology/rml-fnml.owl',

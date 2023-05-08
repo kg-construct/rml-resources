@@ -13,7 +13,7 @@ from rdflib import Graph, Namespace
 
 TEMP_DIR = tempfile.gettempdir()
 SHAPE_URLS = {
-#    'core.ttl': 'https://kg-construct.github.io/rml-core/shapes/core.ttl',
+    'core.ttl': 'https://kg-construct.github.io/rml-core/shapes/core.ttl',
     'io.ttl':   'https://kg-construct.github.io/rml-io/shapes/io.ttl',
     'cc.ttl':   'https://kg-construct.github.io/rml-cc/shapes/cc.ttl',
     'fnml.ttl': 'https://kg-construct.github.io/rml-fnml/shapes/fnml.ttl',

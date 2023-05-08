@@ -14,7 +14,7 @@ from rdflib import Graph, Namespace
 
 TEMP_DIR = tempfile.gettempdir()
 BACKWARDS_COMPATIBILITY_URLS = {
-#    'core-bc.ttl':   'https://kg-construct.github.io/rml-core/ontology/rml-core-bc.ttl',
+    'core-bc.ttl':   'https://kg-construct.github.io/rml-core/ontology/rml-core-bc.ttl',
     'io-bc.ttl':   'https://kg-construct.github.io/rml-io/ontology/rml-io-bc.ttl',
 }
 BACKWARDS_COMPATIBILITY_FILE = '../backwards-compatibility.ttl'
