@@ -20,6 +20,8 @@ dcterms:description a owl:AnnotationProperty .
 
 dcterms:issued a owl:AnnotationProperty .
 
+dcterms:license a owl:AnnotationProperty .
+
 dcterms:modified a owl:AnnotationProperty .
 
 dcterms:publisher a owl:AnnotationProperty .
@@ -93,21 +95,21 @@ oldrml:source a rdf:Property ;
     rdfs:comment "Qualified name of the source data."@en ;
     rdfs:isDefinedBy oldrml: .
 
-rml:rr-rml-bc a owl:Ontology ;
+<http://w3id.org/rml/core/bc> a owl:Ontology ;
     dcterms:creator "Ana Iglesias Molina" ;
     dcterms:description "This module specifies the relationships established by the R2RML and previous RML vocabularies to the new RML specification."@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2023-05-02" ;
     dcterms:title "R2RML to RML alignment module"@en ;
-    vann:preferredNamespaceUri "http://w3id.org/rml/rr-rml-bc" .
+    vann:preferredNamespaceUri "http://w3id.org/rml/core/bc" .
 
-rml:rr-rml-io-bc a owl:Ontology ;
+<http://w3id.org/rml/io/bc> a owl:Ontology ;
     dcterms:creator "Ana Iglesias Molina" ;
     dcterms:description "This module specifies the relationships established by the R2RML and previous RML vocabularies to the new RML-IO specification."@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2023-05-02" ;
     dcterms:title "R2RML to RML alignment module for RML-IO"@en ;
-    vann:preferredNamespaceUri "http://w3id.org/rml/rr-rml-io-bc" .
+    vann:preferredNamespaceUri "http://w3id.org/rml/io/bc" .
 
 <http://www.linkedmodel.org/schema/vaem#acronym> a owl:AnnotationProperty .
 
