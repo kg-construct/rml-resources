@@ -1,7 +1,7 @@
 W3ID ,Target URL,Comment,Implementation,,,,,,,,,,,,,,,,,,,,
 w3id.org/rml,https://kg-construct.github.io/rml-resources/ontology.ttl,Ontology file + prefix for all modules,"Return the complete ontology, composed automatically from all modules",,,,,,,,,,,,,,,,,,,,
 w3id.org/rml/bc,https://kg-construct.github.io/rml-resources/backwards-compatibility.ttl,Backwards compatibility ontology,,,,,,,,,,,,,,,,,,,,,
-w3id.org/rml/portal/(.*),https://kg-construct.github.io/rml-resources/portal/$1,Portal,Redirect to the RML portal,,,,,,,,,,,,,,,,,,,,
+w3id.org/rml/portal/?(.*),https://kg-construct.github.io/rml-resources/portal/$1,Portal,Redirect to the RML portal,,,,,,,,,,,,,,,,,,,,
 w3id.org/rml/shapes,https://kg-construct.github.io/rml-resources/shapes.ttl,Shapes,,,,,,,,,,,,,,,,,,,,,
 w3id.org/rml/resources,https://kg-construct.github.io/rml-resources/resources,Web resources needed for mappings,"Simple hosting of JSON, XML, CSV, etc. files for examples and test case mappings",,,,,,,,,,,,,,,,,,,,
 STAR,,,,,,,,,,,,,,,,,,,,,,,
