@@ -1,0 +1,636 @@
+<http://w3id.org/rml/fnml/> <http://purl.org/dc/terms/contributor> "Ana Iglesias Molina" .
+_:na1967485a60140b9bab9d40fc98ef08ab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rml/childMap> <http://www.w3.org/2000/01/rdf-schema#label> "child map" .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Ben de Meester" .
+<http://w3id.org/rml/star/> <http://purl.org/dc/terms/contributor> "Juli√°n Arenas Guerrero" .
+<http://w3id.org/rml/gatherAs> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a GatherMap with the desired result type of collection or container."@en .
+<http://w3id.org/rml/returnMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/termType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/TriplesMap> <http://www.w3.org/2000/01/rdf-schema#label> "Triples Map" .
+<http://w3id.org/rml/return> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/target> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the target that describe the output data."@en .
+<http://w3id.org/rml/AssertedTriplesMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/ChildMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/Compression> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents file compression schemes."@en .
+<http://w3id.org/rml/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/rml/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rml/LogicalTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a logical target."@en .
+<http://w3id.org/rml/cartessianProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/languageMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/objectMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/XPath> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/StarMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a star map able to generate RDF-star triples."@eb .
+<http://w3id.org/rml/null> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/LogicalSource> .
+<http://w3id.org/rml/append> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/Strategy> .
+<http://w3id.org/rml/GatherMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a term map that generates a collection (rdf:List) or container (rdf:Bag, rdf:Seq, rdf:Alt)."@en .
+<http://w3id.org/rml/ExpressionMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/SubjectMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Ana Iglesias Molina" .
+<http://w3id.org/rml/reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rml/joinCondition> <http://www.w3.org/2000/01/rdf-schema#label> "join condition" .
+<http://w3id.org/rml/namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Namespace> .
+<http://w3id.org/rml/GraphMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/inputValueMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/logicalTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the logical target to where triples are exported to." .
+<http://w3id.org/rml/append> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/cc/> .
+<http://w3id.org/rml/fnml/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference formulation used to refer to extracts of the source data. "@en .
+<http://w3id.org/rml/graph> <http://www.w3.org/2000/01/rdf-schema#label> "graph" .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/modified> "2023-04-19" .
+<http://w3id.org/rml/object> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/PredicateObjectMap> .
+<http://w3id.org/rml/joinCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the join condition for joining the child logical source with the parent logical source of the foreign key constraint."@en .
+<http://w3id.org/rml/termType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/ParentMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a parent map"@en .
+<http://w3id.org/rml/function> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/FunctionExecution> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/allowEmptyListAndContainer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/GatherMap> .
+<http://w3id.org/rml/quotedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/StarMap> .
+<http://w3id.org/rml/ChildMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/null> <http://www.w3.org/2000/01/rdf-schema#label> "null" .
+<http://w3id.org/rml/DatatypeMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/language> <http://www.w3.org/2000/01/rdf-schema#label> "language" .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the source that describe the input data."@en .
+<http://w3id.org/rml/cc/> <http://purl.org/dc/terms/modified> "2023-04-19" .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "David Chaves Fraga" .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#label> "reference formulation" .
+_:na1967485a60140b9bab9d40fc98ef08ab7 <http://www.w3.org/2002/07/owl#unionOf> _:na1967485a60140b9bab9d40fc98ef08ab8 .
+<http://w3id.org/rml/Namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a namespace"@en .
+<http://w3id.org/rml/RefObjectMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/LogicalTarget> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/AssertedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/star/> .
+<http://w3id.org/rml/objectMap> <http://www.w3.org/2000/01/rdf-schema#label> "object map" .
+<http://w3id.org/rml/fnml/> <http://purl.org/dc/terms/modified> "2023-04-19" .
+<http://w3id.org/rml/constant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/NonAssertedTriplesMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/iterator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal> .
+<http://w3id.org/rml/Join> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/ReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#label> "Reference Formulation" .
+<http://w3id.org/rml/return> <http://www.w3.org/2000/01/rdf-schema#label> "return" .
+<http://w3id.org/rml/returnMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/quotedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#label> "quoted triples map" .
+_:na1967485a60140b9bab9d40fc98ef08ab1 <http://www.w3.org/2002/07/owl#unionOf> _:na1967485a60140b9bab9d40fc98ef08ab2 .
+<http://w3id.org/rml/ParentMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/ExpressionMap> .
+_:nf6818509229e4683984e8a75c93947b9b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rml/strategy> <http://www.w3.org/2000/01/rdf-schema#label> "strategy" .
+<http://w3id.org/rml/quotedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/TriplesMap> .
+<http://w3id.org/rml/CSV> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://tools.ietf.org/html/rfc4180> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/Target> .
+<http://w3id.org/rml/ExpressionMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an expression map"@en .
+<http://w3id.org/rml/template> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/rml/targzip> <http://www.w3.org/2000/01/rdf-schema#label> "TarGZip" .
+<http://w3id.org/rml/predicateObjectMap> <http://www.w3.org/2000/01/rdf-schema#label> "predicate object map" .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Source> .
+<http://w3id.org/rml/star/> <http://purl.org/dc/terms/description> "RML module for generating RDF-star graphs"@en .
+<http://w3id.org/rml/FunctionExecution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+_:na1967485a60140b9bab9d40fc98ef08ab10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/Literal> .
+<http://w3id.org/rml/namespaceURL> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Namespace> .
+<http://w3id.org/rml/predicate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/PredicateObjectMap> .
+<http://w3id.org/rml/UTF-8> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the UFT-8 encoding."@en .
+<http://w3id.org/rml/cc/> <http://purl.org/dc/terms/contributor> "Christophe Debruyne" .
+<http://w3id.org/rml/PredicateObjectMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/allowEmptyListAndContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rml/null> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes which data values inside the source should be considered as NULL."@en .
+<http://w3id.org/rml/objectMap> <http://www.w3.org/2000/01/rdf-schema#comment> "An ObjectMap element to generate the object component of the (predicate, object) pair from a logical source record."@en .
+<http://w3id.org/rml/ExpressionMap> <http://www.w3.org/2000/01/rdf-schema#label> "Expression Map" .
+<http://w3id.org/rml/allowEmptyListAndContainer> <http://www.w3.org/2000/01/rdf-schema#label> "allow empty list and container" .
+<http://w3id.org/rml/cc/> <http://purl.org/dc/terms/description> "RML module to generate RDF collections and containers"@en .
+<http://w3id.org/rml/input> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/graphMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/ParentMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/star/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/rml/star/" .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/template> <http://www.w3.org/2000/01/rdf-schema#label> "template" .
+<http://w3id.org/rml/inputValueMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/targzip> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents TarGZip file compression."@en .
+<http://w3id.org/rml/ParameterMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a parameter map."@en .
+<http://w3id.org/rml/Input> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a input for an execution."@en .
+<http://w3id.org/rml/subject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/parent> <http://www.w3.org/2000/01/rdf-schema#comment> "Names a source record in the parent source of a join."@en .
+<http://w3id.org/rml/child> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/cartessianProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Informs that the RDF terms generated by each TermMap of the GatherMap are to be grouped (in the constructed collection or container) by doing a cartesian product of these terms."@en .
+<http://w3id.org/rml/parameter> <http://www.w3.org/2000/01/rdf-schema#label> "parameter" .
+<http://w3id.org/rml/joinCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Join> .
+<http://w3id.org/rml/compression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/subjectMap> <http://www.w3.org/2000/01/rdf-schema#label> "subject map" .
+<http://w3id.org/rml/fnml/> <http://purl.org/dc/terms/contributor> "Samaneh Jozashoori" .
+<http://w3id.org/rml/graph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/io/> <http://purl.org/dc/terms/title> "RML-IO: Source and Target"@en .
+<http://w3id.org/rml/parent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/rml/functionExecution> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/FunctionExecution> .
+<http://w3id.org/rml/language> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ObjectMap> .
+<http://w3id.org/rml/parentTriplesMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/CSV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/star/> <http://purl.org/dc/terms/title> "RML-star"@en .
+<http://w3id.org/rml/Input> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/CSV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/termType> <http://www.w3.org/2000/01/rdf-schema#range> _:na1967485a60140b9bab9d40fc98ef08ab7 .
+<http://w3id.org/rml/compression> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Compression> .
+<http://w3id.org/rml/iterator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/serialization> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/formats/Format> .
+<http://w3id.org/rml/strategy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Strategy element to indicate how to perform an action (e.g. gather for collections and containers, join)."@en .
+<http://w3id.org/rml/target> <http://www.w3.org/2000/01/rdf-schema#label> "target" .
+<http://w3id.org/rml/ObjectMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/parentTriplesMap> <http://www.w3.org/2000/01/rdf-schema#label> "parent triples map" .
+<http://w3id.org/rml/serialization> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the serialization to generate the target output."@en .
+<http://w3id.org/rml/parameterMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Input> .
+<http://w3id.org/rml/logicalTarget> <http://www.w3.org/2000/01/rdf-schema#label> "logical target" .
+<http://w3id.org/rml/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/LanguageMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a language map" .
+<http://w3id.org/rml/reference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ExpressionMap> .
+_:na1967485a60140b9bab9d40fc98ef08ab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/LanguageMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/datatype> <http://www.w3.org/2000/01/rdf-schema#label> "datatype" .
+<http://w3id.org/rml/JSONPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/graph> <http://www.w3.org/2000/01/rdf-schema#comment> "An IRI reference for use as the graph name of all triples generated with the SubjectMap or PredicateObjectMap."@en .
+<http://w3id.org/rml/NonAssertedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TriplesMap> .
+<http://w3id.org/rml/NonAssertedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#label> "Non Asserted Triples Map" .
+<http://w3id.org/rml/FunctionMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/description> "Generic Mapping Language for RDF (RDB/CSV/TSV/XML/JSON/... to RDF) - Vocabulary description"@en .
+<http://w3id.org/rml/DatatypeMap> <http://www.w3.org/2000/01/rdf-schema#label> "Datatype Map" .
+<http://w3id.org/rml/TriplesMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a triples map."@en .
+<http://w3id.org/rml/subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject" .
+<http://w3id.org/rml/UTF-16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/Encoding> .
+<http://w3id.org/rml/Join> <http://www.w3.org/2000/01/rdf-schema#label> "Join" .
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Juli√°n Arenas Guerrero" .
+<http://w3id.org/rml/childMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/ChildMap> .
+<http://w3id.org/rml/languageMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/JSONPath> <http://www.w3.org/2000/01/rdf-schema#label> "JSONPath" .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/Input> <http://www.w3.org/2000/01/rdf-schema#label> "Input" .
+<http://w3id.org/rml/parameterMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/gather> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/GatherMap> .
+<http://w3id.org/rml/inputValueMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Input> .
+<http://w3id.org/rml/functionMap> <http://www.w3.org/2000/01/rdf-schema#label> "function map" .
+<http://w3id.org/rml/cc/> <http://purl.org/dc/terms/contributor> "Franck Michel" .
+<http://w3id.org/rml/Target> <http://www.w3.org/2000/01/rdf-schema#label> "Target" .
+<http://w3id.org/rml/parentMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/joinCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#comment> "A namespace for describing a XPath reference formulation."@en .
+<http://w3id.org/rml/class> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/datatypeMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A DatatypetMap element to generate the datatype component of the object component from a logical source record."@en .
+<http://w3id.org/rml/predicateObjectMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/query> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal> .
+<http://w3id.org/rml/return> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the prefix of a namespace."@en .
+<http://w3id.org/rml/RefObjectMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/DatatypeMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/returnMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/ReturnMap> .
+<http://w3id.org/rml/child> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Join> .
+<http://w3id.org/rml/zip> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/SubjectMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a subject map."@en .
+<http://w3id.org/rml/functionExecution> <http://www.w3.org/2000/01/rdf-schema#label> "function execution" .
+<http://w3id.org/rml/object> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/TermMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/query> <http://www.w3.org/2000/01/rdf-schema#label> "query" .
+<http://w3id.org/rml/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/rml/core/" .
+<http://w3id.org/rml/languageMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A LanguagetMap element to generate the language tag of the object component from a logical source record."@en .
+<http://w3id.org/rml/tarxz> <http://www.w3.org/2000/01/rdf-schema#label> "TarXz" .
+<http://w3id.org/rml/Strategy> <http://www.w3.org/2000/01/rdf-schema#label> "Strategy" .
+<http://w3id.org/rml/encoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/logicalSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the logical source to be mapped."@en .
+<http://w3id.org/rml/io/> <http://purl.org/dc/terms/modified> "2023-04-28" .
+<http://w3id.org/rml/targzip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/input> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the Input element of a Function Map."@en .
+<http://w3id.org/rml/SQL2008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/UTF-16> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the UFT-16 encoding."@en .
+<http://w3id.org/rml/star/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://w3id.org/rml/SQL2008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/parentTriplesMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/UTF-16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/predicateMap> <http://www.w3.org/2000/01/rdf-schema#label> "predicate map" .
+<http://w3id.org/rml/graphMap> <http://www.w3.org/2000/01/rdf-schema#domain> _:na1967485a60140b9bab9d40fc98ef08ab4 .
+<http://w3id.org/rml/compression> <http://www.w3.org/2000/01/rdf-schema#domain> _:n4aab4c70d1594d07bba3cb7b0471d17ab1 .
+<http://w3id.org/rml/graphMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/inputValueMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Franck Michel" .
+<http://w3id.org/rml/functionExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the execution of a function with its required input parameters and values."@en .
+<http://w3id.org/rml/datatypeMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ObjectMap> .
+<http://w3id.org/rml/template> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rml/Namespace> <http://www.w3.org/2000/01/rdf-schema#label> "Namespace" .
+<http://w3id.org/rml/PredicateObjectMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/DatatypeMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/joinCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/XPathReferenceFormulation> .
+<http://w3id.org/rml/iterator> <http://www.w3.org/2000/01/rdf-schema#label> "iterator" .
+<http://w3id.org/rml/class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/inputValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Input> .
+<http://w3id.org/rml/parent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rml/cartessianProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/Strategy> .
+<http://w3id.org/rml/parentMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Join> .
+<http://w3id.org/rml/append> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/Literal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.linkedmodel.org/schema/vaem#acronym> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/gatherAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/allowEmptyListAndContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the behavior of a GatherMap in case rml:gather does not yield any element"@en .
+<http://w3id.org/rml/return> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://w3id.org/rml/Join> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/inputValueMap> <http://www.w3.org/2000/01/rdf-schema#label> "value map" .
+<http://w3id.org/rml/subjectMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/TriplesMap> .
+<http://w3id.org/rml/Join> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a join condition."@en .
+<http://w3id.org/rml/Compression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/CSV> <http://www.w3.org/2000/01/rdf-schema#label> "CSV" .
+_:nf6818509229e4683984e8a75c93947b9b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq> .
+<http://w3id.org/rml/SubjectMap> <http://www.w3.org/2000/01/rdf-schema#label> "Subject Map" .
+<http://w3id.org/rml/datatypeMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/DatatypeMap> .
+<http://w3id.org/rml/iterator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/ChildMap> <http://www.w3.org/2000/01/rdf-schema#label> "Child Map" .
+<http://w3id.org/rml/ObjectMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/parameterMap> <http://www.w3.org/2000/01/rdf-schema#label> "parameter map" .
+<http://w3id.org/rml/XPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/encoding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/allowEmptyListAndContainer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://w3id.org/rml/FunctionExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/functionExecution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/inputValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/UTF-8> <http://www.w3.org/2000/01/rdf-schema#label> "UTF-8" .
+<http://w3id.org/rml/CSV> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes that the CSV file's column names are used for referring to extracts of CSV resources."@en .
+_:na1967485a60140b9bab9d40fc98ef08ab9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/IRI> .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/Strategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/inputValueMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A Value map element to generate the value of a parameter of a function."@en .
+<http://w3id.org/rml/returnMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A Return Map element to generate the return output of a function."@en .
+<http://w3id.org/rml/termType> <http://www.w3.org/2000/01/rdf-schema#comment> "A string indicating whether subject or object generated using the value from a source record name specified should be an IRI reference, blank node, or a literal."@en .
+<http://w3id.org/rml/PredicateMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/query> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/AssertedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of Triples Map that is quoted and asserted in the resulting graph."@en .
+<http://w3id.org/rml/FunctionExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a function execution."@en .
+<http://w3id.org/rml/logicalTarget> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/LogicalTarget> .
+<http://w3id.org/rml/inputValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/reference> <http://www.w3.org/2000/01/rdf-schema#label> "reference"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/rml/compression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/ParameterMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/input> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/namespaceURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rml/termType> <http://www.w3.org/2000/01/rdf-schema#label> "term type" .
+<http://w3id.org/rml/class> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rml/star/> <http://purl.org/dc/terms/contributor> "Anastasia Dimou" .
+<http://w3id.org/rml/constant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/IRI> <http://www.w3.org/2000/01/rdf-schema#label> "IRI" .
+<http://w3id.org/rml/LogicalTarget> <http://www.w3.org/2000/01/rdf-schema#label> "LogicalTarget" .
+<http://w3id.org/rml/FunctionMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a function map."@en .
+<http://w3id.org/rml/functionMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Input> .
+<http://w3id.org/rml/XPath> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/TR/xpath20/> .
+<http://w3id.org/rml/functionMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Namespace> .
+<http://w3id.org/rml/encoding> <http://www.w3.org/2000/01/rdf-schema#label> "encoding" .
+<http://w3id.org/rml/fnml/> <http://purl.org/dc/terms/description> "RML-FNML provides data transformations for generating knowledge graphs from (semi-)structured data"@en .
+<http://w3id.org/rml/object> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the object for the generated triple from the logical source record."@en .
+<http://w3id.org/rml/parentMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/ParentMap> .
+<http://w3id.org/rml/returnMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/append> <http://www.w3.org/2000/01/rdf-schema#label> "Append" .
+<http://w3id.org/rml/quotedTriplesMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/object> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://w3id.org/rml/logicalSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/TriplesMap> .
+<http://w3id.org/rml/template> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/predicateObjectMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+_:na1967485a60140b9bab9d40fc98ef08ab4 <http://www.w3.org/2002/07/owl#unionOf> _:na1967485a60140b9bab9d40fc98ef08ab5 .
+<http://w3id.org/rml/GatherMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/cc/> .
+<http://w3id.org/rml/function> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/tarxz> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents TarXz file compression."@en .
+<http://w3id.org/rml/Input> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/parameterMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A Parameter Map element to generate the parameter of a function."@en .
+<http://w3id.org/rml/inputValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the value of a parameter of a function."@en .
+<http://w3id.org/rml/subjectMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/SubjectMap> .
+<http://w3id.org/rml/function> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://w3id.org/rml/star/> <http://purl.org/dc/terms/modified> "2023-04-05" .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Christophe Debruyne" .
+<http://w3id.org/rml/functionMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/FunctionMap> .
+<http://w3id.org/rml/io/> <http://purl.org/dc/terms/description> "RML-IO enables the description of input data sources and target output data serialization "@en .
+<http://w3id.org/rml/NonAssertedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/star/> .
+<http://w3id.org/rml/ParameterMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/functionMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/ReturnMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/rml/gzip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/Compression> .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/LogicalSource> .
+<http://w3id.org/rml/TriplesMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/CSV> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/UTF-16> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/io/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://w3id.org/rml/parent> <http://www.w3.org/2000/01/rdf-schema#label> "parent" .
+<http://w3id.org/rml/TermMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A function that generates any number of RDF terms from a logical source record."@en .
+<http://w3id.org/rml/function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/parameter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Input> .
+<http://w3id.org/rml/predicate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/child> <http://www.w3.org/2000/01/rdf-schema#label> "child" .
+<http://w3id.org/rml/serialization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/LogicalTarget> .
+<http://w3id.org/rml/FunctionMap> <http://www.w3.org/2000/01/rdf-schema#label> "Function Map" .
+<http://w3id.org/rml/template> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/parentTriplesMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the TriplesMap element corresponding to the parent logical source of the foreign key constraint."@en .
+<http://w3id.org/rml/Source> <http://www.w3.org/2000/01/rdf-schema#label> "Source" .
+_:na1967485a60140b9bab9d40fc98ef08ab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/PredicateObjectMap> .
+<http://w3id.org/rml/function> <http://www.w3.org/2000/01/rdf-schema#label> "function" .
+<http://w3id.org/rml/gather> <http://www.w3.org/2000/01/rdf-schema#label> "gather" .
+<http://w3id.org/rml/Target> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a target."@en .
+<http://w3id.org/rml/JSONPath> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the JSONPath reference formulation, used for referring to extracts of JSON sources."@en .
+<http://w3id.org/rml/ReferenceFormulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/gzip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:na1967485a60140b9bab9d40fc98ef08ab8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:na1967485a60140b9bab9d40fc98ef08ab9 .
+<http://w3id.org/rml/languageMap> <http://www.w3.org/2000/01/rdf-schema#label> "language map" .
+<http://w3id.org/rml/datatypeMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/null> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Source> .
+<http://w3id.org/rml/RefObjectMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a reference to an object map."@en .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#label> "source" .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Samaneh Jozashoori" .
+<http://w3id.org/rml/parentMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/JSONPath> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/TermMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/targzip> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/cc/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://w3id.org/rml/Compression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/SQL2008> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/graph> <http://www.w3.org/2000/01/rdf-schema#domain> _:na1967485a60140b9bab9d40fc98ef08ab1 .
+_:na1967485a60140b9bab9d40fc98ef08ab5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:na1967485a60140b9bab9d40fc98ef08ab6 .
+<http://w3id.org/rml/GraphMap> <http://www.w3.org/2000/01/rdf-schema#label> "Graph Map" .
+<http://w3id.org/rml/SubjectMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:na1967485a60140b9bab9d40fc98ef08ab6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/SubjectMap> .
+<http://w3id.org/rml/LogicalSource> <http://www.w3.org/2000/01/rdf-schema#label> "Logical Source" .
+<http://w3id.org/rml/StarMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/BlankNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/parameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/GraphMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/parameter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://w3id.org/rml/language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/ReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a Reference Formulation."@en .
+<http://w3id.org/rml/UTF-8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/Encoding> .
+<http://w3id.org/rml/XPath> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the XPath reference formulation, used for referring to extracts of XML sources."@en .
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#label> "XPath Reference Formulation" .
+<http://w3id.org/rml/parameterMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/ParameterMap> .
+<http://w3id.org/rml/StarMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/star/> .
+<http://w3id.org/rml/parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/logicalSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/LogicalSource> .
+<http://w3id.org/rml/childMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Names a child map in the child source of a join."@en .
+<http://w3id.org/rml/reference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/Compression> <http://www.w3.org/2000/01/rdf-schema#label> "compression class" .
+<http://w3id.org/rml/parentTriplesMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/RefObjectMap> .
+<http://w3id.org/rml/TermMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/Source> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/StarMap> <http://www.w3.org/2000/01/rdf-schema#label> "Star Map" .
+<http://w3id.org/rml/ParentMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/datatype> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ObjectMap> .
+<http://w3id.org/rml/fnml/> <http://purl.org/dc/terms/title> "RML-FNML"@en .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://w3id.org/rml/gzip> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents GZip file compression."@en .
+<http://w3id.org/rml/parent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/targzip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/Compression> .
+<http://w3id.org/rml/GraphMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a graph map."@en .
+<http://w3id.org/rml/serialization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4aab4c70d1594d07bba3cb7b0471d17ab3 .
+<http://w3id.org/rml/iterator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/LogicalSource> .
+<http://w3id.org/rml/Source> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a source."@en .
+<http://w3id.org/rml/namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#label> "namespace prefix" .
+_:na1967485a60140b9bab9d40fc98ef08ab6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rml/io/> <http://purl.org/dc/terms/contributor> "Anastasia Dimou" .
+<http://w3id.org/rml/function> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a data transformation function."@en .
+<http://w3id.org/rml/subject> <http://www.w3.org/2000/01/rdf-schema#comment> "An IRI reference for use as subject for all the RDF triples generated from a logical source record."@en .
+<http://w3id.org/rml/Strategy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/SQL2008> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the Core SQL 2008."@en .
+<http://w3id.org/rml/Encoding> <http://www.w3.org/2000/01/rdf-schema#label> "Encoding class" .
+<http://w3id.org/rml/predicate> <http://www.w3.org/2000/01/rdf-schema#label> "predicate" .
+<http://w3id.org/rml/fnml/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://w3id.org/rml/ReturnMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/cc/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/rml/fnml/> <http://purl.org/dc/terms/contributor> "Ben de Meester" .
+<http://w3id.org/rml/predicate> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the predicate for the generated triple from the logical source record."@en .
+<http://w3id.org/rml/UTF-8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/languageMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/LanguageMap> .
+<http://w3id.org/rml/BlankNode> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a blank node, used with termType"@en .
+<http://w3id.org/rml/Namespace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/predicate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/subjectMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A SubjectMap element to generate a subject from a logical source record."@en .
+<http://w3id.org/rml/IRI> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes an IRI, used with termpType."@en .
+<http://w3id.org/rml/append> <http://www.w3.org/2000/01/rdf-schema#comment> "Informs that the sets of RDF terms generated by each TermMap of the GatherMap are to be appended within the collection or container."@en .
+<http://w3id.org/rml/cartessianProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Cartessian Product" .
+<http://w3id.org/rml/input> <http://www.w3.org/2000/01/rdf-schema#label> "input" .
+<http://w3id.org/rml/Literal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/graphMap> <http://www.w3.org/2000/01/rdf-schema#label> "graph map" .
+<http://w3id.org/rml/namespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rml/PredicateMap> <http://www.w3.org/2000/01/rdf-schema#label> "Predicate Map" .
+<http://w3id.org/rml/target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/LogicalTarget> .
+<http://w3id.org/rml/DatatypeMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a datatype map"@en .
+<http://w3id.org/rml/namespaceURL> <http://www.w3.org/2000/01/rdf-schema#label> "namespace URL" .
+<http://w3id.org/rml/datatype> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/GatherMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/constant> <http://www.w3.org/2000/01/rdf-schema#label> "constant" .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab4 <http://www.w3.org/2002/07/owl#unionOf> _:n4aab4c70d1594d07bba3cb7b0471d17ab5 .
+<http://w3id.org/rml/query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/logicalSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/logicalSource> <http://www.w3.org/2000/01/rdf-schema#label> "logical source" .
+<http://w3id.org/rml/LogicalSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a logical source."@en .
+<http://w3id.org/rml/zip> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents Zip file compression."@en .
+_:na1967485a60140b9bab9d40fc98ef08ab7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/LanguageMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/input> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/FunctionExecution> .
+<http://w3id.org/rml/Encoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents encoding formats."@en .
+<http://w3id.org/rml/zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/Encoding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/Target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/returnMap> <http://www.w3.org/2000/01/rdf-schema#label> "return map" .
+<http://w3id.org/rml/cartessianProduct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/cc/> .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/title> "RML: Generic Mapping Language for RDF"@en .
+<http://w3id.org/rml/reference> <http://www.w3.org/2000/01/rdf-schema#comment> "A valid expression that selects values from the source data. The reference should conform to the syntax rules/grammar of the specified Reference Formulation." .
+<http://w3id.org/rml/PredicateObjectMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a predicate-object map."@en .
+<http://w3id.org/rml/quotedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#comment> "An quoted TriplesMap element to generate a RDF-star triple as subject or object or another triple from a logical source record."@en .
+<http://w3id.org/rml/iterator> <http://www.w3.org/2000/01/rdf-schema#comment> "An expression qualified according to the reference formulation specified for pointing to an extract of the source data. "@en .
+<http://w3id.org/rml/template> <http://www.w3.org/2000/01/rdf-schema#comment> "A template (format string) to specify how to generate a value for a expression map, using one or more records from a logical source record."@en .
+<http://w3id.org/rml/objectMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/PredicateObjectMap> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/inputValue> <http://www.w3.org/2000/01/rdf-schema#label> "value" .
+<http://w3id.org/rml/ReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+_:nf6818509229e4683984e8a75c93947b9b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt> .
+<http://w3id.org/rml/allowEmptyListAndContainer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/cc/> .
+<http://w3id.org/rml/GatherMap> <http://www.w3.org/2000/01/rdf-schema#label> "Gather Map" .
+<http://w3id.org/rml/graphMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a GraphMap. When used with a SubjectMap element, all the RDF triples generated from a logical row will be stored in the specified named graph. Otherwise, the RDF triple generated using the (predicate, object) pair will be stored in the specified named graph."@en .
+<http://w3id.org/rml/childMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rml/logicalTarget> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/PredicateMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+_:nf6818509229e4683984e8a75c93947b9b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag> .
+<http://w3id.org/rml/tarxz> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/XPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/rml/null> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/null> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal> .
+<http://w3id.org/rml/datatypeMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Anastasia Dimou" .
+<http://w3id.org/rml/datatype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/TriplesMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/ReturnMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a return map."@en .
+<http://w3id.org/rml/PredicateMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a predicate map."@en .
+<http://w3id.org/rml/star/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/rml/BlankNode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/encoding> <http://www.w3.org/2000/01/rdf-schema#domain> _:n4aab4c70d1594d07bba3cb7b0471d17ab4 .
+<http://w3id.org/rml/Target> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/gather> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/ExpressionMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/parent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Join> .
+_:nf6818509229e4683984e8a75c93947b9b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nf6818509229e4683984e8a75c93947b9b5 .
+<http://w3id.org/rml/FunctionExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Function Execution" .
+<http://w3id.org/rml/object> <http://www.w3.org/2000/01/rdf-schema#label> "object" .
+<http://w3id.org/rml/parameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the parameter of a function."@en .
+<http://w3id.org/rml/predicateMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/PredicateObjectMap> .
+<http://w3id.org/rml/Namespace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/predicateMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/encoding> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Encoding> .
+<http://w3id.org/rml/strategy> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Strategy> .
+<http://w3id.org/rml/RefObjectMap> <http://www.w3.org/2000/01/rdf-schema#label> "Reference Object Map" .
+<http://w3id.org/rml/star/> <http://purl.org/dc/terms/contributor> "Ana Iglesias Molina" .
+<http://w3id.org/rml/serialization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/predicateObjectMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A PredicateObjectMap element to generate (predicate, object) pair from a logical source record."@en .
+<http://w3id.org/rml/child> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/rml/predicateMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A PredicateMap element to generate the predicate component of the (predicate, object) pair from a logical source record."@en .
+<http://w3id.org/rml/childMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/ChildMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/logicalTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/constant> <http://www.w3.org/2000/01/rdf-schema#comment> "A property for indicating whether a expression map is a constant-valued expression map."@en .
+<http://w3id.org/rml/tarxz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/Compression> .
+<http://w3id.org/rml/subjectMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/io/> <http://purl.org/dc/terms/contributor> "Pano Maria" .
+<http://w3id.org/rml/referenceFormulation> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/ParameterMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/predicateObjectMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/TriplesMap> .
+<http://w3id.org/rml/subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/TriplesMap> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/Source> .
+_:na1967485a60140b9bab9d40fc98ef08ab8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/BlankNode> .
+<http://w3id.org/rml/NonAssertedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of Triples Map that is quoted but not asserted in the resulting graph"@en .
+<http://w3id.org/rml/star/> <http://purl.org/dc/terms/contributor> "David Chaves Fraga" .
+<http://w3id.org/rml/namespacePrefix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/tarxz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:na1967485a60140b9bab9d40fc98ef08ab5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/PredicateObjectMap> .
+<http://w3id.org/rml/parentMap> <http://www.w3.org/2000/01/rdf-schema#label> "parent map" .
+<http://w3id.org/rml/functionMap> <http://www.w3.org/2000/01/rdf-schema#comment> "A Function Map element to generate the data transformation function."@en .
+<http://w3id.org/rml/gather> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies where the terms of a collection or container come from."@en .
+<http://w3id.org/rml/logicalSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/Source> .
+<http://w3id.org/rml/gatherAs> <http://www.w3.org/2000/01/rdf-schema#range> _:nf6818509229e4683984e8a75c93947b9b1 .
+_:na1967485a60140b9bab9d40fc98ef08ab10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/rml/serialization> <http://www.w3.org/2000/01/rdf-schema#label> "serialization" .
+<http://w3id.org/rml/IRI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/datatypeMap> <http://www.w3.org/2000/01/rdf-schema#label> "datatype map" .
+<http://w3id.org/rml/target> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Target> .
+<http://w3id.org/rml/parentMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Names a parent map in the parent source of a join."@en .
+_:nf6818509229e4683984e8a75c93947b9b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://w3id.org/rml/compression> <http://www.w3.org/2000/01/rdf-schema#label> "compression" .
+<http://w3id.org/rml/functionExecution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+_:na1967485a60140b9bab9d40fc98ef08ab9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:na1967485a60140b9bab9d40fc98ef08ab10 .
+<http://w3id.org/rml/object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://w3id.org/rml/input> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/Input> .
+<http://w3id.org/rml/XPath> <http://www.w3.org/2000/01/rdf-schema#label> "XPath" .
+<http://w3id.org/rml/Literal> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a Literal, used with termType."@en .
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a XPath Reference Formulation."@en .
+<http://w3id.org/rml/LogicalSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/predicateMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/PredicateMap> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab1 <http://www.w3.org/2002/07/owl#unionOf> _:n4aab4c70d1594d07bba3cb7b0471d17ab2 .
+<http://w3id.org/rml/return> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ExpressionMap> .
+<http://w3id.org/rml/target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/namespaceURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/childMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Join> .
+<http://w3id.org/rml/gzip> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/Target> .
+<http://w3id.org/rml/SQL2008> <http://www.w3.org/2000/01/rdf-schema#label> "SQL 2008" .
+<http://w3id.org/rml/language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/rml/Strategy> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a strategy to perform a action (e.g. gather for collections and containers, joins)."@en .
+<http://w3id.org/rml/SubjectMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/query> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/Source> .
+<http://w3id.org/rml/quotedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/star/> .
+<http://w3id.org/rml/child> <http://www.w3.org/2000/01/rdf-schema#comment> "Names a source record in the child source of a join."@en .
+<http://w3id.org/rml/Encoding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/strategy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/GraphMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n4aab4c70d1594d07bba3cb7b0471d17ab6 .
+<http://w3id.org/rml/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/cc/> <http://purl.org/dc/terms/title> "RML-Containers"@en .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Pano Maria" .
+_:nf6818509229e4683984e8a75c93947b9b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nf6818509229e4683984e8a75c93947b9b3 .
+<http://w3id.org/rml/reference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/rml/class> <http://www.w3.org/2000/01/rdf-schema#label> "class" .
+<http://w3id.org/rml/termType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/query> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines which query should be applied on the source during access"@en .
+<http://w3id.org/rml/Source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/UTF-8> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+_:nf6818509229e4683984e8a75c93947b9b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nf6818509229e4683984e8a75c93947b9b4 .
+<http://w3id.org/rml/ReturnMap> <http://www.w3.org/2000/01/rdf-schema#label> "Return Map" .
+<http://w3id.org/rml/io/> <http://purl.org/dc/terms/contributor> "Dylan Van Assche" .
+<http://w3id.org/rml/encoding> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the encoding format of a Source or Target."@en .
+<http://w3id.org/rml/PredicateMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/parentTriplesMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/TriplesMap> .
+<http://w3id.org/rml/logicalTarget> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/TermMap> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/gzip> <http://www.w3.org/2000/01/rdf-schema#label> "GZip" .
+<http://w3id.org/rml/predicate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://w3id.org/rml/BlankNode> <http://www.w3.org/2000/01/rdf-schema#label> "Blank Node" .
+<http://w3id.org/rml/languageMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/ObjectMap> .
+<http://w3id.org/rml/functionExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/ParentMap> <http://www.w3.org/2000/01/rdf-schema#label> "Parent Map" .
+_:na1967485a60140b9bab9d40fc98ef08ab4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/target> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/subjectMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/AssertedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#label> "Asserted Triples Map" .
+<http://w3id.org/rml/datatype> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the datatype of the object component for the generated triple."@en .
+<http://w3id.org/rml/AssertedTriplesMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TriplesMap> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/io/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/rml/ReturnMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/gatherAs> <http://www.w3.org/2000/01/rdf-schema#label> "gather as" .
+<http://w3id.org/rml/IRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/FunctionMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/fnml/> .
+<http://w3id.org/rml/child> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://w3id.org/rml/ObjectMap> <http://www.w3.org/2000/01/rdf-schema#label> "Object Map" .
+_:na1967485a60140b9bab9d40fc98ef08ab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:na1967485a60140b9bab9d40fc98ef08ab3 .
+<http://w3id.org/rml/LogicalSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+<http://w3id.org/rml/gather> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/cc/> .
+<http://w3id.org/rml/return> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the return output of a function."@en .
+<http://w3id.org/rml/ObjectMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/source> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/io/> .
+_:na1967485a60140b9bab9d40fc98ef08ab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/rml/SubjectMap> .
+<http://w3id.org/rml/io/> <http://purl.org/dc/terms/contributor> "Ana Iglesias Molina" .
+<http://w3id.org/rml/JSONPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/graph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/language> <http://www.w3.org/2000/01/rdf-schema#comment> "Specified the language for the object component for the generated triple."@en .
+<http://w3id.org/rml/Literal> <http://www.w3.org/2000/01/rdf-schema#label> "Literal" .
+<http://w3id.org/rml/class> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/SubjectMap> .
+<http://w3id.org/rml/GatherMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/ParameterMap> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Map" .
+<http://w3id.org/rml/predicateMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/namespace> <http://www.w3.org/2000/01/rdf-schema#label> "namespace" .
+<http://w3id.org/rml/gatherAs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/cc/> .
+_:nf6818509229e4683984e8a75c93947b9b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/UTF-16> <http://www.w3.org/2000/01/rdf-schema#label> "UTF-16" .
+_:n4aab4c70d1594d07bba3cb7b0471d17ab4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/rml/objectMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+_:nf6818509229e4683984e8a75c93947b9b1 <http://www.w3.org/2002/07/owl#oneOf> _:nf6818509229e4683984e8a75c93947b9b2 .
+<http://w3id.org/rml/ObjectMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an object map."@en .
+<http://w3id.org/rml/PredicateObjectMap> <http://www.w3.org/2000/01/rdf-schema#label> "Predicate Object Map" .
+<http://w3id.org/rml/class> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject value generated for a logical source record will be asserted as an instance of this RDFS class."@en .
+<http://w3id.org/rml/datatype> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://w3id.org/rml/parameterMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/LanguageMap> <http://www.w3.org/2000/01/rdf-schema#label> "Language Map" .
+<http://w3id.org/rml/compression> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the compression format of a Source or Target."@en .
+<http://w3id.org/rml/graphMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/GraphMap> .
+<http://w3id.org/rml/zip> <http://www.w3.org/2000/01/rdf-schema#label> "Zip" .
+<http://w3id.org/rml/namespaceURL> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the URL of a namespace."@en .
+<http://w3id.org/rml/LanguageMap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rml/core/> .
+<http://w3id.org/rml/zip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/rml/Compression> .
+<http://w3id.org/rml/cc/> <http://purl.org/dc/terms/contributor> "Ana Iglesias Molina" .
+<http://w3id.org/rml/core> <http://purl.org/dc/terms/contributor> "Dylan Van Assche" .
+<http://w3id.org/rml/constant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://w3id.org/rml/predicateObjectMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/rml/PredicateObjectMap> .
+<http://w3id.org/rml/FunctionMap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/TermMap> .
+<http://w3id.org/rml/XPathReferenceFormulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rml/ReferenceFormulation> .
+<http://w3id.org/rml/LogicalTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/rml/ChildMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a child map"@en .
+<http://w3id.org/rml/strategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/rml/gatherAs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/rml/GatherMap> .
+<http://w3id.org/rml/TermMap> <http://www.w3.org/2000/01/rdf-schema#label> "Term Map"@en .

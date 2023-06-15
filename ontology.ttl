@@ -145,7 +145,8 @@ rml:core a owl:Ontology ;
     dcterms:description "Generic Mapping Language for RDF (RDB/CSV/TSV/XML/JSON/... to RDF) - Vocabulary description"@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2023-04-19" ;
-    dcterms:title "RML: Generic Mapping Language for RDF"@en .
+    dcterms:title "RML: Generic Mapping Language for RDF"@en ;
+    vann:preferredNamespaceUri "http://w3id.org/rml/core/" .
 
 rml:datatype a owl:ObjectProperty ;
     rdfs:label "datatype" ;
@@ -647,7 +648,8 @@ rml:SubjectMap a owl:Class ;
     dcterms:description "RML module for generating RDF-star graphs"@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     dcterms:modified "2023-04-05" ;
-    dcterms:title "RML-star"@en .
+    dcterms:title "RML-star"@en ;
+    vann:preferredNamespaceUri "http://w3id.org/rml/star/" .
 
 rml:Compression a owl:Class ;
     rdfs:label "compression class" ;

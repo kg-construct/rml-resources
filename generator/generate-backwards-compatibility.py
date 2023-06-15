@@ -17,7 +17,10 @@ BACKWARDS_COMPATIBILITY_URLS = {
     'core-bc.ttl':   'https://kg-construct.github.io/rml-core/ontology/rml-core-bc.ttl',
     'io-bc.ttl':   'https://kg-construct.github.io/rml-io/ontology/rml-io-bc.ttl',
 }
-BACKWARDS_COMPATIBILITY_FILE = '../backwards-compatibility.ttl'
+BACKWARDS_COMPATIBILITY_TTL = '../backwards-compatibility.ttl'
+BACKWARDS_COMPATIBILITY_RDF = '../backwards-compatibility.rdf'
+BACKWARDS_COMPATIBILITY_JSONLD = '../backwards-compatibility.jsonld'
+BACKWARDS_COMPATIBILITY_NT = '../backwards-compatibility.nt'
 RML = Namespace('http://w3id.org/rml/')
 OLDRML = Namespace('http://semweb.mmlab.be/ns/rml#')
 R2RML = Namespace('http://www.w3.org/ns/r2rml#')
@@ -66,9 +69,15 @@ def combine_backwards_compatibilities():
             print(f'Parsing backwards_compatibility {name} failed')
             sys.exit(2)
 
-    print(f'Writing backwards_compatibility to {BACKWARDS_COMPATIBILITY_FILE}')
-    backwards_compatibility.serialize(destination=BACKWARDS_COMPATIBILITY_FILE,
-                                      format='turtle')
+    print('Writing backwards_compatibility...')
+    backwards_compatibility.serialize(destination=BACKWARDS_COMPATIBILITY_TTL,
+                                      format='turtle', encoding='utf-8')
+    backwards_compatibility.serialize(destination=BACKWARDS_COMPATIBILITY_RDF,
+                                      format='xml', encoding='utf-8')
+    backwards_compatibility.serialize(destination=BACKWARDS_COMPATIBILITY_JSONLD,
+                                      format='json-ld', encoding='utf-8')
+    backwards_compatibility.serialize(destination=BACKWARDS_COMPATIBILITY_NT,
+                                      format='ntriples', encoding='utf-8')
 
 
 if __name__ == '__main__':

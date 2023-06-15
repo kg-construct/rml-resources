@@ -19,7 +19,10 @@ ONTOLOGY_URLS = {
     'fnml.owl': 'https://kg-construct.github.io/rml-fnml/ontology/rml-fnml.owl',
     'star.owl': 'https://kg-construct.github.io/rml-star/ontology/rml-star.owl',
 }
-ONTOLOGY_FILE = '../ontology.ttl'
+ONTOLOGY_TTL = '../ontology.ttl'
+ONTOLOGY_RDF = '../ontology.rdf'
+ONTOLOGY_JSONLD = '../ontology.jsonld'
+ONTOLOGY_NT = '../ontology.nt'
 RML = Namespace('http://w3id.org/rml/')
 
 
@@ -57,8 +60,15 @@ def combine_ontologies():
             print(f'Parsing ontology {name} failed')
             sys.exit(2)
 
-    print(f'Writing ontology to {ONTOLOGY_FILE}')
-    ontology.serialize(destination=ONTOLOGY_FILE, format='turtle')
+    print('Writing ontology...')
+    ontology.serialize(destination=ONTOLOGY_TTL, format='turtle',
+                       encoding='utf-8')
+    ontology.serialize(destination=ONTOLOGY_RDF, format='xml',
+                       encoding='utf-8')
+    ontology.serialize(destination=ONTOLOGY_JSONLD, format='json-ld',
+                       encoding='utf-8')
+    ontology.serialize(destination=ONTOLOGY_NT, format='ntriples',
+                       encoding='utf-8')
 
 
 if __name__ == '__main__':

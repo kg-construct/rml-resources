@@ -1,0 +1,4495 @@
+[
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLTriplesMapPropertiesShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab123"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab117"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab115"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab116"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab118"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/NonAssertedTriplesMap"
+      },
+      {
+        "@id": "http://w3id.org/rml/TriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab123",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        A Subject Map element to generate a subject for generated RDF triples.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:SubjectMap must be an IRI or blank node.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "subjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab124"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab125"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/subjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/subjectMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab124",
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLSubjectMapShape"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab125",
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLStarMapShape"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab117",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        A Predicate Object Map element to generate a (predicate, object) pair.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:PredicateObjectMap must be an IRI or blank node.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "predicateObjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLPredicateObjectMapShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/predicateObjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/predicateObjectMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab115",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        A logical source is any source that is mapped to RDF triples.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        Exactly one rml:logicalSource is required to access the data source.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "logicalSource"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/logicalSource"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/logicalSource"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab116",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        An IRI reference for use as subject for all generated RDF triples.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:subject must be an IRI or blank node.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "subject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLsubjectShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/subject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/subject"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab118",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Either a rml:subject, rml:subjectMap or a rml:quotedTriplesMap is required, not multiple.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        Either a rml:subject, rml:subjectMap or a rml:quotedTriplesMap is required, not multiple.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "subjectMap/subject/quotedTriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab119"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/subjectMap"
+      },
+      {
+        "@id": "http://w3id.org/rml/quotedTriplesMap"
+      },
+      {
+        "@id": "http://w3id.org/rml/subject"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab119",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/subjectMap"
+          },
+          {
+            "@id": "http://w3id.org/rml/subject"
+          },
+          {
+            "@id": "http://w3id.org/rml/quotedTriplesMap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLStrategyAppendShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Strategy to follow when generating RDF triples.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/append"
+          },
+          {
+            "@id": "http://w3id.org/rml/cartessianProduct"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Strategy must be either rml:append or rml:cartessianProduct.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "Strategy"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/strategy"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLPredicateMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab71"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Predicate Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Predicate Object Map must generate an IRI representing the predicate of an \n    RDF triple.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "PredicateMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/PredicateMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/predicateMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab71",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/IRI"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:termType for Predicate Map can only be a rml:IRI;\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/termType"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLTermMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLExpressionMapShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab137"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Term Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Term Map is an Expression Map with optionally a term type specified.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "TermMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab137",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            An IRI indicating whether a generated term should be an IRI, \n            Blank Node, or a Literal.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/IRI"
+          },
+          {
+            "@id": "http://w3id.org/rml/Literal"
+          },
+          {
+            "@id": "http://w3id.org/rml/BlankNode"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:termType must be either rml:IRI, rml:Literal, or rml:BlankNode \n            for a Term Map. May only be provided once.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "termType"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/termType"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/termType"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    A logical target is any target to where generated RDF triples are exported\n    to.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    RML Logical Target requires one rml:target.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "RML Logical Target"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b4"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/LogicalTarget"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/logicalTarget"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b4",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        The target (rml:target) locates the output target. It is a URI\n        that represents the target where it must export generated RDF triples\n        to.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:target must be provided to locate the target. rml:target must \n        be provided exactly once as an URI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:target"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLTargetShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/target"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLlanguageShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Specified the language for the generated Literal.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:language must be a valid language tag according to BCP47 and may\n    only be provided once as string.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#pattern": [
+      {
+        "@value": "^((?:(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))|((?:([A-Za-z]{2,3}(-(?:[A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4})(-(?:[A-Za-z]{4}))?(-(?:[A-Za-z]{2}|[0-9]{3}))?(-(?:[A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-(?:[0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(?:x(-[A-Za-z0-9]{1,8})+))?)|(?:x(-[A-Za-z0-9]{1,8})+))$"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/language"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLgraphShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    An IRI reference for use as the graph name of all triples generated with \n    the Graph Map. \n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:graph must be an IRI.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "graph"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/graph"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLparentShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    A Literal reference to use as reference to the parent data source.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:parent shortcut for rml:ParentMap must be a Literal.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "parent"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#parent"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLsubjectShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    An IRI reference to use as subject for all the RDF triples.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:subject shortcut for rml:SubjectMap must be a IRI or BlankNode.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "subject"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/subject"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLSubjectMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLGraphMapPropertiesShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab106"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab107"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Subject Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Subject Map must generate an IRI representing the subject of an RDF triple.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "SubjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/SubjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/subjectMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab106",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            The subject value generated will be asserted as an instance of this\n            RDFS class.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:class must be an IRI and may be specified multiple times.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "class"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/class"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/class"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab107",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/IRI"
+          },
+          {
+            "@id": "http://w3id.org/rml/BlankNode"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:termType must be a rml:IRI or rml:BlankNode for Subject Map.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/termType"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLSourceShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    A source describes access to a data source. Any data access description\n    is allowed, but rml:Source provides additional properties to complete\n    such descriptions.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    RML Source accepts one or multiple rml:null, one rml:query,\n    one rml:compression, and one rml:encoding. All of them are optional.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "RML Source"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b8"
+      },
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b9"
+      },
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b5"
+      },
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b7"
+      },
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b6"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/Source"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/source"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b8",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:encoding specifies the encoding to use when accessing the data \n        source. By default, UTF-8 is used.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:encoding must be provided as an IRI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:encoding"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/encoding"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b9",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:null specifies which data values inside the source should be \n        considered as NULL. Defaults to the default NULL character of a source,\n        if available.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:null must be provided as a Literal.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:null"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/null"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b5",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:null specifies how NULL or empty values are exposed by the data \n        source.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:source must be provided as a string Literal.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:null"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/null"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b7",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:compression specifies the compression algorithm to use when\n        accessing the data source. By default, no compression is applied.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:query must be provided as an IRI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:compression"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/compression"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b6",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:query specifies the query to execute on a data source if that data\n        source suports it.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:query must be provided as a string Literal.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:query"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/query"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLPredicateObjectMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLGraphMapPropertiesShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab76"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab80"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab81"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab82"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab87"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab94"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Predicate Object Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "PredicateObjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/PredicateObjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/predicateObjectMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab76",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            At least one rml:predicate or rml:predicateMap must be provided.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            At least one rml:predicate or rml:predicateMap must be provided.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "predicate/predicateMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab77"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/predicate"
+      },
+      {
+        "@id": "http://w3id.org/rml/predicateMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab77",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/predicate"
+          },
+          {
+            "@id": "http://w3id.org/rml/predicateMap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab80",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            A PredicateMap element to generate the predicate component of the \n            (predicate, object) pair from a logical table row or iterator.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:predicateMap must be an IRI or blank node and be provided once.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "predicateMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLPredicateMapShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/predicateMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/predicateMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab81",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Specifies the predicate for the generated triple from the logical table \n            row or iterator.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:predicate must be an IRI and be provided once.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "predicate"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLpredicateShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/predicate"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/predicate"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab82",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Either an rml:object, rml:objectMap, or rml:quotedTriplesMap must be provided, not multiple.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            Either an rml:object, rml:objectMap, or rml:quotedTriplesMap must be provided, not multiple\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "object/objectMap/quotedTriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab83"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/objectMap"
+      },
+      {
+        "@id": "http://w3id.org/rml/quotedTriplesMap"
+      },
+      {
+        "@id": "http://w3id.org/rml/object"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab83",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/object"
+          },
+          {
+            "@id": "http://w3id.org/rml/objectMap"
+          },
+          {
+            "@id": "http://w3id.org/rml/quotedTriplesMap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab87",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            An ObjectMap element to generate the object component of the \n            (predicate, object) pair from a logical table row or iterator.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:objectMap must be an IRI or blank node and be provided once.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "objectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab88"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab89"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab90"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/objectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/objectMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab88",
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLObjectMapShape"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab89",
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLRefObjectMapShape"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab90",
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLStarMapShape"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab94",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Specifies the object for the generated RDF triples.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:object must be an IRI and be provided once.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "object"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLobjectShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/object"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/object"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLpredicateShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Specifies the predicate for the generated triple.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:predicate must be an IRI.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "predicate"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/predicate"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLGraphMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab25"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Graph Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:GraphMap must specify an rml:template, rml:reference or rml:constant \n    with the IRI of the Named Graph.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "GraphMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#GraphMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/graphMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab25",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/IRI"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:termType must be an IRI for a Graph Map.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/termType"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLGatherMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:n10784427fbff49fca0d32be9f777acefb1"
+          },
+          {
+            "@id": "_:n10784427fbff49fca0d32be9f777acefb2"
+          },
+          {
+            "@id": "_:n10784427fbff49fca0d32be9f777acefb7"
+          },
+          {
+            "@id": "_:n10784427fbff49fca0d32be9f777acefb8"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Gather Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Gather Map requires one rml:strategy, one rml:gatherAs, and a list of\n    Term Map with rml:gather.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "GatherMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:n10784427fbff49fca0d32be9f777acefb1",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            rml:strategy specifies the collection strategy to use: rml:append\n            or rml:catessianProduct. rml:append is the default strategy.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            Zero or one rml:strategy is required.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "strategy"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLStrategyAppendShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/strategy"
+      }
+    ]
+  },
+  {
+    "@id": "_:n10784427fbff49fca0d32be9f777acefb2",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            rml:gatherAs specifies how to gather the collection e.g. a rdf:Alt,\n            rdf:List, rdf:Bag, or rdf:Seq.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt"
+          },
+          {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+          },
+          {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag"
+          },
+          {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            One rml:gatherAs is required.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "gatherAs"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/gatherAs"
+      }
+    ]
+  },
+  {
+    "@id": "_:n10784427fbff49fca0d32be9f777acefb7",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Defines the behavior when the collection is empty. True will generate\n            a rdf:nil for a RDF collection or a resource with no members for an RDF\n            container. False will not generate any collection or container.\n            Default is false.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            Zero or one rml:allowEmptyListAndContainer is required with datatype\n            xsd:boolean.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "allowEmptyListAndContainer"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/allowEmptyListAndContainer"
+      }
+    ]
+  },
+  {
+    "@id": "_:n10784427fbff49fca0d32be9f777acefb8",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            RML Term Maps to gather in the collection or container.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            one or more rml:gather properties are needed, each pointing to a\n            RML Term Map.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "gather"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/gather"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLchildShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    A Literal reference to use as reference to the child data source.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:child shortcut for rml:ChildMap must be a Literal.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "child"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#child"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLParentMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab66"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Parent Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:ParentMap must specify a literal referencing data in the parent data\n    source.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "ParentMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#ParentMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#parent"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab66",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/r2rml#Literal"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:termType for Parent Map can only be a rml:Literal;\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#termType"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLStarMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLJoinConditionPropertiesShape"
+          },
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b13"
+          },
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b14"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Star Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Star Map requires exactly one rml:quotedTriplesMap and\n    zero or more rml:joinCondition.\n    "
+      },
+      {
+        "@value": "StarMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/StarMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b13",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            An Quoted Triples Map element to generate a RDF-star triple as \n            subject or object or another triple from a logical source record.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            Exactly one rml:quotedTriplesMap is required.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "quotedTriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/quotedTriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b14",
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            An Quoted Triples Map may never be used for generating a predicate.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "PredicateMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/predicateObjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#xone": [
+      {
+        "@list": [
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b15"
+          },
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b15",
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/predicate"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b16",
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/predicateMap"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLFunctionMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb8"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Function Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "FunctionMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/functionMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb8"
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLJoinConditionPropertiesShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape",
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Specifies the join condition for joining a child data source with \n    a parent data source of the foreign key constraint.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:joinCondition must specify an rml:parent and rml:child.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "joinCondition"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLJoinShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/joinCondition"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/joinCondition"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLFunctionExecutionShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Function Execution.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:FunctionExecution"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb1"
+      },
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb7"
+      },
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb5"
+      },
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb6"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/functionExecution"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb1",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Exactly one rml:function or rml:functionMap is required.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        Exactly one rml:function or rml:functionMap is required.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:function/rml:functionMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb2"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb2",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/function"
+          },
+          {
+            "@id": "http://w3id.org/rml/functionMap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb7",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Input parameters for the function.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:input must be an IRI or Blank node.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:input"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/input"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb5",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        FnO function to execute.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:functionMap must be an IRI or Blank node.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:functionMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLFunctionMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/functionMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb6",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        FnO function to execute.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:function must be an IRI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:function"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/function"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLGraphMapPropertiesShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab131"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab136"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab135"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/graphMap"
+      },
+      {
+        "@id": "http://w3id.org/rml/graph"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab131",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Either an rml:graph or rml:graphMap may be optionally be provided,\n        but not both.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        Either an rml:graph or rml:graphMap may be optionally be provided,\n        but not both.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "graph/graphMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab132"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab132",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/graph"
+          },
+          {
+            "@id": "http://w3id.org/rml/graphMap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab136",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        An IRI reference to use as the named graph of all generated triples.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:graphMap must be an IRI. \n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "graph"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLgraphShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/graph"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab135",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Specifies a Graph Map. When used with a Subject Map element, all the\n        RDF triples generated will be stored in the specified named graph.\n        Otherwise, the RDF triple generated using the (predicate, object) \n        pair will be stored in the specified named graph.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:graphMap must be either an IRI or blank node. \n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "graphMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLGraphMapShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/graphMap"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLLogicalSourceShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    A logical source is any source that is mapped to RDF triples.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    RML Logical Source requires one rml:source and depending on the source \n    type: one rml:query, one rml:referenceFormulation and/or \n    one rml:iterator.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "RML Logical Source"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b2"
+      },
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b1"
+      },
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b3"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/LogicalSource"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/logicalSource"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b2",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        The logical iterator (rml:iterator) defines the iteration loop used to \n        map the data of the input source. Depends on the reference formulation\n        if an iterator is necessary.  \n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:iterator must be a Literal specifying the iterator to iterate over \n        the data source.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:iterator"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/iterator"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b1",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        The source (rml:source) locates the input data source. It is a URI\n        that represents the data source where the data source is.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:source must be provided to locate the data source. \n        rml:source must be provided exactly once as an URI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:source"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLSourceShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/source"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b3",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        The reference formulation (rml:referenceFormulation) defines how to \n        reference to elements of the data of the input source.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:referenceFormulation must be a blank node or IRI specifying the \n        reference formulation on how to reference elements of a data source.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:referenceFormulation"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/referenceFormulation"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLdatatypeShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    An IRI reference for use as the graph name of all triples generated with \n    the datatype.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:datatype must be an IRI.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "datatype"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/datatype"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLNonAssertedTriplesMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTriplesMapPropertiesShape"
+          },
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b25"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Non Asserted Triples Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Non Asserted Triples Map requires exactly one rml:subject or \n    one rml:subjectMap and zero or more rml:predicateObjectMaps\n    and exactly one rml:logicalSource.\n    "
+      },
+      {
+        "@value": "NonAssertedTriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/NonAssertedTriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b25",
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            Non Asserted Triples Map must have a rml:NonAssertedTriplesMap type.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#value": [
+      {
+        "@id": "http://w3id.org/rml/NonAssertedTriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLParameterMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb24"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Parameter Map of a function.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "ParameterMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/parameterMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb24"
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLobjectShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    An IRI, Blank Node, or Literal to use as object for all the RDF triples.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:object shortcut for rml:objectMap must be an IRI, Blank Node, \n    or Literal.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "object"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/object"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLInputShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents an Input for a function.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:Input"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb17"
+      },
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb19"
+      },
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb20"
+      },
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb16"
+      },
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb12"
+      },
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb18"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/input"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb17",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Parameters to supply to FnO function.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:inputValue must be a string Literal.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:inputValue"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/inputValue"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb19",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Parameters to supply to FnO function.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:parameter must be an IRI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:parameter"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/parameter"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb20",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Exactly one rml:inputValue or rml:inputValueMap is required.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        Exactly one rml:inputValue or rml:inputValueMap is required.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:inputValue/rml:inputValueMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb21"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb21",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/inputValue"
+          },
+          {
+            "@id": "http://w3id.org/rml/inputValueMap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb16",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Values of the parameters.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:inputValueMap must be an IRI or Blank node, provided once.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:inputValueMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/inputValueMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb12",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Exactly one rml:parameter or rml:parameterMap is required.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        Exactly one rml:parameter or rml:parameterMap is required.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:parameter/rml:parameterMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb13"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb13",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/parameter"
+          },
+          {
+            "@id": "http://w3id.org/rml/parameterMap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb18",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Parameters to supply to FnO function.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:parameterMap must be an IRI or Blank node.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:parameterMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLParameterMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/parameterMap"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLDatatypeMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab8"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Datatype Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:DatatypeMap must specify an rml:template, rml:reference, or rml:constant\n    with the IRI of the datatype.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "DatatypeMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/DatatypeMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/datatypeMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab8",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/IRI"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:termType for Datatype Map can only be a rml:IRI;\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/termType"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLAssertedAndNonTriplesMapPropertiesShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b1"
+          },
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b2"
+          },
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b7"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/AssertedTriplesMap"
+      },
+      {
+        "@id": "http://w3id.org/rml/NonAssertedTriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/quotedTriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b1",
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            Exactly one Predicate Object Map must be specified in the\n            Triples Map referenced by rml:quotedTriplesMap.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/predicateObjectMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b2",
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:quotedTriplesMap expects either a rml:AssertedTriplesMap \n            or rml:NonAssertedTriplesMap.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#or": [
+      {
+        "@list": [
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b3"
+          },
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b3",
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLAssertedTriplesMapShape"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b4",
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLNonAssertedTriplesMapShape"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b7",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/AssertedTriplesMap"
+          },
+          {
+            "@id": "http://w3id.org/rml/NonAssertedTriplesMap"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            Either a rml:AssertedTriplesMap or rml:NonAssertedTriplesMap,\n            but not both.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLTargetShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    A target describes access to a data target. Any data access description\n    is allowed, but rml:Target provides additional properties to complete\n    such descriptions.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    RML Target accepts one rml:compression, and one rml:encoding.\n    All of them are optional.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "RML Target"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b11"
+      },
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b10"
+      },
+      {
+        "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b12"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/Target"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/target"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b11",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:encoding specifies the encoding to use when accessing the data \n        target. By default, UTF-8 is used.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:encoding must be provided as an IRI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:encoding"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/encoding"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b10",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:compression specifies the compression algorithm to use when\n        accessing the data target. By default, no compression is applied.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:query must be provided as an IRI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:compression"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/compression"
+      }
+    ]
+  },
+  {
+    "@id": "_:n8a4f7638d0f04087bf0f668a24cd2c49b12",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:serialization specifies the serialization format to use when\n        exporting the generated RDF to a target. By default N-Quads is used.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:serialization must be provided as an IRI.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "rml:serialization"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/serialization"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLTriplesMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTriplesMapPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab128"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Triples Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Triples Map requires exactly one rml:subject or one rml:subjectMap and zero\n    or more rml:predicateObjectMaps.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "TriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/TriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab128"
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLJoinShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Join.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:Join must specify exactly one rml:parent/rml:parentMap \n    and rml:child/rml:childMap.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "Join"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab30"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab37"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab38"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab35"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab36"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab34"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#Join"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#joinCondition"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab30",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:parent/rml:parentMap may only be provided once and \n        not at the same time.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "parentMap/parent"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab31"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab31",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/r2rml#parentMap"
+          },
+          {
+            "@id": "http://www.w3.org/ns/r2rml#parent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab37",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Specifies the parent of the object component for joining.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "parent"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLparentShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#parent"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#parent"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab38",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        rml:child/rml:childMap may only be provided once and \n        not at the same time.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "childMap/child"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab39"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab39",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/r2rml#childMap"
+          },
+          {
+            "@id": "http://www.w3.org/ns/r2rml#child"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab35",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Specifies the child of the object component for joining.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "child"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLchildShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#IRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#child"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#child"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab36",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Specifies the parent of the object component for joining.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:parentMap must point to a rml:ParentMap specifying the \n        parent tag of the string Literal.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "parentMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLParentMapShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#parentMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#parentMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab34",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Specifies the child of the object component for joining.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:childMap must point to a rml:ChildMap specifying the\n        child of the Literal.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "childMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLChildMapShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#childMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#childMap"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLObjectMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab49"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab55"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab56"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab57"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab58"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents an Object Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Object Map must generate a IRI, Blank Node, or Literal which has optionally\n    a language tag or datatype.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "ObjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/ObjectMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab49",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            rml:language/rml:languageMap and rml:datatype/rml:datatypeMap\n            may only be provided once and not at the same time.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "languageMap/datatypeMap/language/datatype"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab50"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab50",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/languageMap"
+          },
+          {
+            "@id": "http://w3id.org/rml/datatypeMap"
+          },
+          {
+            "@id": "http://w3id.org/rml/language"
+          },
+          {
+            "@id": "http://w3id.org/rml/datatype"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab55",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Specified the language map for the object component for the \n            generated RDF triples.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:languageMap must point to a rml:LanguageMap specifying the \n            language tag of the string Literal.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "languageMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLLanguageMapShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/languageMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/languageMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab56",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Specifies the datatype of the object component for the generated \n            RDF triples.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:datatypeMap must point to a rml:DatatypeMap specifying the\n            datatype of the Literal.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "datatypeMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLDatatypeMapShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/datatypeMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/datatypeMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab57",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Language tag for the object.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLlanguageShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/language"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/language"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab58",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Datatype for the object.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "datatype"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLdatatypeShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/datatype"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/datatype"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLLanguageMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab42"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab44"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Language Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:LanguageMap must specify an rml:template or rml:constant with the IRI \n    of the language.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "LanguageMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/LanguageMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/languageMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab42",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/Literal"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:termType for Language Map can only be a rml:Literal.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/termType"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab44",
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/constant"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#pattern": [
+      {
+        "@value": "^((?:(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))|((?:([A-Za-z]{2,3}(-(?:[A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4})(-(?:[A-Za-z]{4}))?(-(?:[A-Za-z]{2}|[0-9]{3}))?(-(?:[A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-(?:[0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(?:x(-[A-Za-z0-9]{1,8})+))?)|(?:x(-[A-Za-z0-9]{1,8})+))$"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLChildMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab3"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Child Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:ChildMap must specify a literal referencing data in the child data\n    source.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "ChildMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#ChildMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#child"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab3",
+    "http://www.w3.org/ns/shacl#in": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/r2rml#Literal"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:termType for Child Map can only be a rml:Literal;\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#termType"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLAssertedTriplesMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTriplesMapPropertiesShape"
+          },
+          {
+            "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b22"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Asserted Triples Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "AssertedTriplesMap"
+      },
+      {
+        "@value": "\n    Asserted Triples Map requires exactly one rml:subject or \n    one rml:subjectMap and zero or more rml:predicateObjectMaps\n    and exactly one rml:logicalSource.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://w3id.org/rml/AssertedTriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:ncb0d254ca5b242859fa5f3ef2ad16906b22",
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            Asserted Triples Map must have a rml:AssertedTriplesMap type.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#value": [
+      {
+        "@id": "http://w3id.org/rml/AssertedTriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLReturnMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLTermMapShape"
+          },
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape"
+          },
+          {
+            "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb28"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Return Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "ReturnMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetObjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/returnMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nbcd8d1351d9244c3af3695ee970bbfdeb28"
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLRefObjectMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#and": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/shapes/RMLJoinConditionPropertiesShape"
+          },
+          {
+            "@id": "_:nb1339c95c048423bb093759d03754ddab103"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Reference Object Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    rml:RefObjectMap must specify a rml:parentTriplesMap and zero or more \n    rml:joinConditions.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "RefObjectMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetClass": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#RefObjectMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab103",
+    "http://www.w3.org/ns/shacl#class": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#TriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n            Specifies the Triples Map element corresponding to the parent data\n            source of the foreign key constraint.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n            rml:parentTriplesMap may only be provided once and must be an IRI\n            or Blank Node referring to a Triples Map.\n            "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "parentTriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#node": [
+      {
+        "@id": "http://w3id.org/rml/shapes/RMLTriplesMapShape"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#parentTriplesMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://www.w3.org/ns/r2rml#parentTriplesMap"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLLogicalTargetPropertiesShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#PropertyShape",
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    A logical target is any target to where generated RDF triples are\n    exported to.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Zero or one rml:logicalTarget is required to export RDF triples.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 0
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "logicalTarget"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/logicalTarget"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/logicalTarget"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/rml/shapes/RMLExpressionMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n    Represents a Expression Map.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n    Expression Map requires one rml:template or one rml:constant or one\n    rml:reference.\n    "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "ExpressionMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#property": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab22"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab13"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab20"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab23"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab21"
+      },
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab24"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab22",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        A Function Execution rml:functionExecution is used to define the FnO \n        function to execute from the RML-FNML specification. RML Core only \n        validates if the property is present and has the right node kind.\n        The actual validation happens with RML-FNML SHACL shapes.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:functionExecution must be an IRI;\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "functionExecution"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/functionExecution"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/functionExecution"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab13",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        Exactly one rml:template, one rml:constant, one rml:reference,\n        one rml:returnMap, or one rml:functionExecution is required.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#maxCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        Exactly one rml:template, one rml:constant, one rml:reference,\n        one rml:returnMap, or one rml:functionExecution is required.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#minCount": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "template/constant/reference/returnMap/functionExecution"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "_:nb1339c95c048423bb093759d03754ddab14"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/returnMap"
+      },
+      {
+        "@id": "http://w3id.org/rml/template"
+      },
+      {
+        "@id": "http://w3id.org/rml/functionExecution"
+      },
+      {
+        "@id": "http://w3id.org/rml/reference"
+      },
+      {
+        "@id": "http://w3id.org/rml/constant"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab14",
+    "http://www.w3.org/ns/shacl#alternativePath": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/rml/template"
+          },
+          {
+            "@id": "http://w3id.org/rml/constant"
+          },
+          {
+            "@id": "http://w3id.org/rml/reference"
+          },
+          {
+            "@id": "http://w3id.org/rml/returnMap"
+          },
+          {
+            "@id": "http://w3id.org/rml/functionExecution"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab20",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        A reference rml:reference is used to refer to a column in case of \n        databases, a record in case of CSV or TSV data source, an element in \n        case of XML data source, an object in case of a JSON data source, etc.\n\n        A reference must be a valid identifier, considering the reference \n        formulation (rml:referenceFormulation) specified. The reference can be\n        an absolute path, or a path relative to the iterator specified at the \n        logical source. \n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:reference must be a string.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "reference"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/reference"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/reference"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab23",
+    "http://www.w3.org/ns/shacl#datatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        A template (format string) to specify how to generate a value for a \n        subject, predicate, or object, using one or more columns from a logical\n        table row or iterator.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:template must be a string.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "template"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#Literal"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/template"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab21",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        A Return Map rml:returnMap is used to define the return values of a FnO\n        function from the RML-FNML specification. RML Core only validates if the\n        property is present and has the right node kind. The actual validation\n        happens with RML-FNML SHACL shapes.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:returnMap must be an IRI;\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "returnMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#nodeKind": [
+      {
+        "@id": "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/returnMap"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/returnMap"
+      }
+    ]
+  },
+  {
+    "@id": "_:nb1339c95c048423bb093759d03754ddab24",
+    "http://www.w3.org/ns/shacl#description": [
+      {
+        "@value": "\n        A property for indicating whether a term map is a constant-valued term \n        map.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#message": [
+      {
+        "@value": "\n        rml:constant must be an IRI or Literal.\n        "
+      }
+    ],
+    "http://www.w3.org/ns/shacl#name": [
+      {
+        "@value": "constant"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#path": [
+      {
+        "@id": "http://w3id.org/rml/constant"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#targetSubjectsOf": [
+      {
+        "@id": "http://w3id.org/rml/constant"
+      }
+    ]
+  }
+]

@@ -19,7 +19,10 @@ SHAPE_URLS = {
     'fnml.ttl': 'https://kg-construct.github.io/rml-fnml/shapes/fnml.ttl',
     'star.ttl': 'https://kg-construct.github.io/rml-star/shapes/star.ttl',
 }
-SHAPE_FILE = '../shapes.ttl'
+SHAPE_TTL = '../shapes.ttl'
+SHAPE_RDF = '../shapes.rdf'
+SHAPE_JSONLD = '../shapes.jsonld'
+SHAPE_NT = '../shapes.nt'
 SHACL = Namespace('http://www.w3.org/ns/shacl#')
 RML = Namespace('http://w3id.org/rml/')
 
@@ -59,8 +62,12 @@ def combine_shapes():
             print(f'Parsing SHACL shape {name} failed')
             sys.exit(2)
 
-    print(f'Writing shape to {SHAPE_FILE}')
-    shape.serialize(destination=SHAPE_FILE, format='turtle')
+    print('Writing shape...')
+    shape.serialize(destination=SHAPE_TTL, format='turtle', encoding='utf-8')
+    shape.serialize(destination=SHAPE_RDF, format='xml', encoding='utf-8')
+    shape.serialize(destination=SHAPE_NT, format='ntriples', encoding='utf-8')
+    shape.serialize(destination=SHAPE_JSONLD, format='json-ld',
+                    encoding='utf-8')
 
 
 if __name__ == '__main__':
