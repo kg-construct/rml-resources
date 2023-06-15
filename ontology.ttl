@@ -1,5 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://purl.org/ontology/bibo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -27,12 +28,6 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 
-rml:AssertedTriplesMap a owl:Class ;
-    rdfs:label "Asserted Triples Map" ;
-    rdfs:comment "A type of Triples Map that is quoted and asserted in the resulting graph."@en ;
-    rdfs:isDefinedBy <http://w3id.org/rml/star/> ;
-    rdfs:subClassOf rml:TriplesMap .
-
 rml:CSV a rml:ReferenceFormulation,
         owl:NamedIndividual ;
     rdfs:label "CSV" ;
@@ -45,12 +40,6 @@ rml:JSONPath a rml:ReferenceFormulation,
     rdfs:label "JSONPath" ;
     rdfs:comment "Denotes the JSONPath reference formulation, used for referring to extracts of JSON sources."@en ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> .
-
-rml:NonAssertedTriplesMap a owl:Class ;
-    rdfs:label "Non Asserted Triples Map" ;
-    rdfs:comment "A type of Triples Map that is quoted but not asserted in the resulting graph"@en ;
-    rdfs:isDefinedBy <http://w3id.org/rml/star/> ;
-    rdfs:subClassOf rml:TriplesMap .
 
 rml:SQL2008 a rml:ReferenceFormulation,
         owl:NamedIndividual ;
@@ -131,29 +120,11 @@ rml:constant a rdf:Property ;
     rdfs:domain rml:ExpressionMap ;
     rdfs:isDefinedBy <http://w3id.org/rml/core/> .
 
-rml:core a owl:Ontology ;
-    dcterms:contributor "Ana Iglesias Molina",
-        "Anastasia Dimou",
-        "Ben de Meester",
-        "Christophe Debruyne",
-        "David Chaves Fraga",
-        "Dylan Van Assche",
-        "Franck Michel",
-        "Juli√°n Arenas Guerrero",
-        "Pano Maria",
-        "Samaneh Jozashoori" ;
-    dcterms:description "Generic Mapping Language for RDF (RDB/CSV/TSV/XML/JSON/... to RDF) - Vocabulary description"@en ;
-    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2023-04-19" ;
-    dcterms:title "RML: Generic Mapping Language for RDF"@en ;
-    vann:preferredNamespaceUri "http://w3id.org/rml/core/" .
-
 rml:datatype a owl:ObjectProperty ;
     rdfs:label "datatype" ;
     rdfs:comment "Specifies the datatype of the object component for the generated triple."@en ;
     rdfs:domain rml:ObjectMap ;
-    rdfs:isDefinedBy <http://w3id.org/rml/core/> ;
-    rdfs:range rdfs:Datatype .
+    rdfs:isDefinedBy <http://w3id.org/rml/core/> .
 
 rml:datatypeMap a owl:ObjectProperty ;
     rdfs:label "datatype map" ;
@@ -307,6 +278,12 @@ rml:namespaceURL a owl:DatatypeProperty ;
     rdfs:domain rml:Namespace ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> .
 
+rml:none a rml:Compression,
+        owl:NamedIndividual ;
+    rdfs:label "None" ;
+    rdfs:comment "Represents no compression."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/io/> .
+
 rml:null a owl:ObjectProperty ;
     rdfs:label "null" ;
     rdfs:comment "Describes which data values inside the source should be considered as NULL."@en ;
@@ -366,8 +343,7 @@ rml:predicate a owl:ObjectProperty ;
     rdfs:label "predicate" ;
     rdfs:comment "Specifies the predicate for the generated triple from the logical source record."@en ;
     rdfs:domain rml:PredicateObjectMap ;
-    rdfs:isDefinedBy <http://w3id.org/rml/core/> ;
-    rdfs:range rdf:Property .
+    rdfs:isDefinedBy <http://w3id.org/rml/core/> .
 
 rml:predicateMap a owl:ObjectProperty ;
     rdfs:label "predicate map" ;
@@ -395,7 +371,8 @@ rml:quotedTriplesMap a owl:ObjectProperty ;
     rdfs:comment "An quoted TriplesMap element to generate a RDF-star triple as subject or object or another triple from a logical source record."@en ;
     rdfs:domain rml:StarMap ;
     rdfs:isDefinedBy <http://w3id.org/rml/star/> ;
-    rdfs:range rml:TriplesMap .
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( rml:AssertedTriplesMap rml:NonAssertedTriplesMap ) ] .
 
 rml:reference a owl:DatatypeProperty ;
     rdfs:label "reference"^^xsd:string ;
@@ -502,6 +479,12 @@ rml:zip a rml:Compression,
 
 foaf:name a owl:AnnotationProperty .
 
+rml:AssertedTriplesMap a owl:Class ;
+    rdfs:label "Asserted Triples Map" ;
+    rdfs:comment "A type of Triples Map that is quoted and asserted in the resulting graph."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/star/> ;
+    rdfs:subClassOf rml:TriplesMap .
+
 rml:BlankNode a owl:Class ;
     rdfs:label "Blank Node" ;
     rdfs:comment "Denotes a blank node, used with termType"@en ;
@@ -546,6 +529,12 @@ rml:Literal a owl:Class ;
     rdfs:label "Literal" ;
     rdfs:comment "Denotes a Literal, used with termType."@en ;
     rdfs:isDefinedBy <http://w3id.org/rml/core/> .
+
+rml:NonAssertedTriplesMap a owl:Class ;
+    rdfs:label "Non Asserted Triples Map" ;
+    rdfs:comment "A type of Triples Map that is quoted but not asserted in the resulting graph"@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/star/> ;
+    rdfs:subClassOf rml:TriplesMap .
 
 rml:ParameterMap a owl:Class ;
     rdfs:label "Parameter Map" ;
@@ -645,16 +634,17 @@ rml:SubjectMap a owl:Class ;
         "Anastasia Dimou",
         "David Chaves Fraga",
         "Juli√°n Arenas Guerrero" ;
+    dcterms:created "2023-03-14" ;
     dcterms:description "RML module for generating RDF-star graphs"@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2023-04-05" ;
+    dcterms:modified "2023-06-15" ;
+    dcterms:publisher <https://www.w3.org/community/kg-construct/> ;
     dcterms:title "RML-star"@en ;
-    vann:preferredNamespaceUri "http://w3id.org/rml/star/" .
-
-rml:Compression a owl:Class ;
-    rdfs:label "compression class" ;
-    rdfs:comment "Represents file compression schemes."@en ;
-    rdfs:isDefinedBy <http://w3id.org/rml/io/> .
+    ns1:status "draft" ;
+    vann:preferredNamespacePrefix "rml" ;
+    vann:preferredNamespaceUri "http://w3id.org/rml/" ;
+    owl:versionIRI rml:star ;
+    owl:versionInfo "0.1.0" .
 
 rml:Join a owl:Class ;
     rdfs:label "Join" ;
@@ -664,6 +654,11 @@ rml:Join a owl:Class ;
 rml:Source a owl:Class ;
     rdfs:label "Source" ;
     rdfs:comment "Denotes a source."@en ;
+    rdfs:isDefinedBy <http://w3id.org/rml/io/> .
+
+rml:Compression a owl:Class ;
+    rdfs:label "compression class" ;
+    rdfs:comment "Represents file compression schemes."@en ;
     rdfs:isDefinedBy <http://w3id.org/rml/io/> .
 
 rml:Input a owl:Class ;
@@ -680,10 +675,17 @@ rml:ReferenceFormulation a owl:Class ;
     dcterms:contributor "Ana Iglesias Molina",
         "Christophe Debruyne",
         "Franck Michel" ;
+    dcterms:created "2023-03-14" ;
     dcterms:description "RML module to generate RDF collections and containers"@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2023-04-19" ;
-    dcterms:title "RML-Containers"@en .
+    dcterms:modified "2023-06-15" ;
+    dcterms:publisher <https://www.w3.org/community/kg-construct/> ;
+    dcterms:title "RML-Containers"@en ;
+    ns1:status "draft" ;
+    vann:preferredNamespacePrefix "rml" ;
+    vann:preferredNamespaceUri "http://w3id.org/rml/" ;
+    owl:versionIRI rml:cc ;
+    owl:versionInfo "0.1.0" .
 
 rml:PredicateObjectMap a owl:Class ;
     rdfs:label "Predicate Object Map" ;
@@ -710,18 +712,55 @@ rml:TermMap a owl:Class ;
     dcterms:contributor "Ana Iglesias Molina",
         "Ben de Meester",
         "Samaneh Jozashoori" ;
+    dcterms:created "2023-03-14" ;
     dcterms:description "RML-FNML provides data transformations for generating knowledge graphs from (semi-)structured data"@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2023-04-19" ;
-    dcterms:title "RML-FNML"@en .
+    dcterms:modified "2023-06-15" ;
+    dcterms:publisher <https://www.w3.org/community/kg-construct/> ;
+    dcterms:title "RML-FNML"@en ;
+    ns1:status "draft" ;
+    vann:preferredNamespacePrefix "rml" ;
+    vann:preferredNamespaceUri "http://w3id.org/rml/" ;
+    owl:versionIRI rml:fnml ;
+    owl:versionInfo "0.1.0" .
 
 <http://w3id.org/rml/io/> a owl:Ontology ;
     dcterms:contributor "Ana Iglesias Molina",
         "Anastasia Dimou",
         "Dylan Van Assche",
         "Pano Maria" ;
+    dcterms:created "2023-03-14" ;
     dcterms:description "RML-IO enables the description of input data sources and target output data serialization "@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2023-04-28" ;
-    dcterms:title "RML-IO: Source and Target"@en .
+    dcterms:modified "2023-06-15" ;
+    dcterms:publisher <https://www.w3.org/community/kg-construct/> ;
+    dcterms:title "RML-IO: Source and Target"@en ;
+    ns1:status "draft" ;
+    vann:preferredNamespacePrefix "rml" ;
+    vann:preferredNamespaceUri "http://w3id.org/rml/" ;
+    owl:versionIRI rml:io ;
+    owl:versionInfo "0.1.0" .
+
+<http://w3id.org/rml/core/> a owl:Ontology ;
+    dcterms:contributor "Ana Iglesias Molina",
+        "Anastasia Dimou",
+        "Ben de Meester",
+        "Christophe Debruyne",
+        "David Chaves Fraga",
+        "Dylan Van Assche",
+        "Franck Michel",
+        "Juli√°n Arenas Guerrero",
+        "Pano Maria",
+        "Samaneh Jozashoori" ;
+    dcterms:created "2023-03-14" ;
+    dcterms:description "Generic Mapping Language for RDF (RDB/CSV/TSV/XML/JSON/... to RDF) - Vocabulary description"@en ;
+    dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    dcterms:modified "2023-06-15" ;
+    dcterms:publisher <https://www.w3.org/community/kg-construct/> ;
+    dcterms:title "RML: Generic Mapping Language for RDF"@en ;
+    ns1:status "draft" ;
+    vann:preferredNamespacePrefix "rml" ;
+    vann:preferredNamespaceUri "http://w3id.org/rml/" ;
+    owl:versionIRI <http://w3id.org/rml/core/> ;
+    owl:versionInfo "0.1.0" .
 

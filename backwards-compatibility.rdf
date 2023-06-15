@@ -6,400 +6,400 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/rml/io/bc">
-    <dcterms:description xml:lang="en">This module specifies the relationships established by the R2RML and previous RML vocabularies to the new RML-IO specification.</dcterms:description>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <dcterms:title xml:lang="en">R2RML to RML alignment module for RML-IO</dcterms:title>
-    <dcterms:creator>Ana Iglesias Molina</dcterms:creator>
-    <vann:preferredNamespaceUri>http://w3id.org/rml/io/bc</vann:preferredNamespaceUri>
-    <dcterms:modified>2023-05-02</dcterms:modified>
-    <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#BaseSource">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Base Source</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
-    <rdfs:comment xml:lang="en">Denotes a base source.</rdfs:comment>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/LogicalSource"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/ql#XPath">
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/ql#CSV">
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/CSV"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://semweb.mmlab.be/ns/rml#ReferenceFormulation"/>
-    <rdfs:label>JSONPath</rdfs:label>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/XPath"/>
-    <rdfs:comment xml:lang="en">Denotes the XPath reference formulation, used for referring to extracts of XML sources.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Denotes that the CSV file's column names are used for referring to extracts of CSV resources.</rdfs:comment>
+    <rdfs:label>CSV</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/ql#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#inverseExpression">
-    <rdfs:label xml:lang="en">inverse expression</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    <rdfs:comment xml:lang="en">An expression that allows, at query processing time, use of index-based access to the the (underlying) relational tables, instead of simply retrieving the table rows first and then applying a filter. This property is useful for retrieval based on conditions involving subject, predicate, or object generated from logical table column(s) and involves some transformation.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#predicate">
-    <rdfs:label xml:lang="en">predicate</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the predicate for the generated triple from the logical table row.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#PredicateMap">
+    <rdfs:comment xml:lang="en">Represents a predicate map.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/predicate"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#datatype">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">datatype</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/datatype"/>
-    <rdfs:comment xml:lang="en">Specifies the datatype of the object component for the generated triple from a logical table row.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#R2RMLView">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">Denotes an R2RML view.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/LogicalSource"/>
-    <rdfs:label xml:lang="en">R2RML View</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#parentTriplesMap">
-    <rdfs:label xml:lang="en">parent triples map</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/parentTriplesMap"/>
-    <rdfs:comment xml:lang="en">Specifies the TriplesMap element corresponding to the parent logical table of the foreign key constraint.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#LogicalSource">
-    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
-    <rdfs:comment xml:lang="en">Denotes a logical source.</rdfs:comment>
-    <rdfs:label xml:lang="en">Logical Source</rdfs:label>
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/LogicalSource"/>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/PredicateMap"/>
+    <rdfs:label xml:lang="en">Predicate Map</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#joinCondition">
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/graph"/>
-    <rdfs:comment xml:lang="en">Specifies the join condition for joining the child logical table with the parent logical table of the foreign key constraint.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#constant">
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/constant"/>
+    <rdfs:label xml:lang="en">constant</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">graph</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#object">
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/object"/>
-    <rdfs:label xml:lang="en">object</rdfs:label>
-    <rdfs:comment xml:lang="en">Specifies the object for the generated triple from the logical table row.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#subjectMap">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">subject map</rdfs:label>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/subject"/>
-    <rdfs:comment xml:lang="en">A PredicateObjectMap element to generate (predicate, object) pair from a logical table row.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#RefObjectMap">
-    <rdfs:label xml:lang="en">Reference Object Map</rdfs:label>
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/RefObjectMap"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">Denotes a reference to an object map.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#predicateObjectMap">
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/predicate"/>
-    <rdfs:comment xml:lang="en">A PredicateObjectMap element to generate (predicate, object) pair from a logical table row.</rdfs:comment>
-    <rdfs:label xml:lang="en">predicate object map</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#GraphMap">
-    <rdfs:comment xml:lang="en">Represents an object map.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Represents a graph map.</rdfs:comment>
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/ObjectMap"/>
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/GraphMap"/>
-    <rdfs:label xml:lang="en">Object Map</rdfs:label>
-    <rdfs:label xml:lang="en">Graph Map</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#graph">
     <rdfs:comment xml:lang="en">An IRI reference for use as the graph name of all triples generated with the SubjectMap or PredicateObjectMap.</rdfs:comment>
     <rdfs:comment xml:lang="en">An IRI reference for use as the graph name of all triples generated with the GraphMap.</rdfs:comment>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/graph"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/graph"/>
     <rdfs:label xml:lang="en">graph</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#reference">
-    <rdfs:comment xml:lang="en">A valid expression that selects values from the source data. The reference should conform to the syntax rules/grammar of the specified Reference Formulation.</rdfs:comment>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/reference"/>
-    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
-    <rdfs:label xml:lang="en">inverse expression</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.linkedmodel.org/schema/vaem#acronym">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#PredicateMap">
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/PredicateMap"/>
-    <rdfs:label xml:lang="en">Predicate Map</rdfs:label>
-    <rdfs:comment xml:lang="en">Represents a predicate map.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#object">
+    <rdfs:label xml:lang="en">object</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#logicalSource">
-    <rdfs:label xml:lang="en">logical source</rdfs:label>
+    <rdfs:comment xml:lang="en">Specifies the object for the generated triple from the logical table row.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/logicalSource"/>
-    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
-    <rdfs:comment xml:lang="en">Represents the logical source to be mapped. This can be a pointer to any dataset.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#child">
-    <rdfs:label xml:lang="en">child</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/child"/>
-    <rdfs:comment xml:lang="en">Names a column in the child table of a join.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#Join">
-    <rdfs:label xml:lang="en">Join</rdfs:label>
-    <rdfs:comment xml:lang="en">Represents a join condition.</rdfs:comment>
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/Join"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#parent">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="en">parent</rdfs:label>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/parent"/>
-    <rdfs:comment xml:lang="en">Names a column in the parent table of a join.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#IRI">
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/IRI"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">IRI</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">Denotes an IRI, used with termType.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#language">
-    <rdfs:label xml:lang="en">language</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/language"/>
-    <rdfs:comment xml:lang="en">Specified the language for the object component for the generated triple from a logical table row.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#TriplesMap">
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/TriplesMap"/>
-    <rdfs:label xml:lang="en">Triples Map</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">Represents a triples map.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#sqlVersion">
-    <rdfs:comment xml:lang="en">An identifier for a SQL version.</rdfs:comment>
-    <rdfs:label xml:lang="en">SQL version</rdfs:label>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/referenceFormulation"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://w3id.org/rml/core/bc">
-    <dcterms:description xml:lang="en">This module specifies the relationships established by the R2RML and previous RML vocabularies to the new RML specification.</dcterms:description>
-    <vann:preferredNamespaceUri>http://w3id.org/rml/core/bc</vann:preferredNamespaceUri>
-    <dcterms:modified>2023-05-02</dcterms:modified>
-    <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-    <dcterms:title xml:lang="en">R2RML to RML alignment module</dcterms:title>
-    <dcterms:creator>Ana Iglesias Molina</dcterms:creator>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#TriplesMap">
-    <rdfs:label xml:lang="en">Triples Map</rdfs:label>
-    <rdfs:comment xml:lang="en">Represents a triples map.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/TriplesMap"/>
-    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#SubjectMap">
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/SubjectMap"/>
-    <rdfs:comment xml:lang="en">Represents a subject map.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Subject Map</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#predicateMap">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">A PredicateMap element to generate the predicate component of the (predicate, object) pair from a logical table row.</rdfs:comment>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/predicateMap"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">predicate map</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#LogicalTable">
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/LogicalSource"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">Denotes a logical table.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Logical Table</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#SQL2008">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:label>SQL 2008</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:comment xml:lang="en">Core SQL 2008</rdfs:comment>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/SQL2008"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/ql#CSV">
-    <rdfs:comment xml:lang="en">Denotes that the CSV file's column names are used for referring to extracts of CSV resources.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdf:type rdf:resource="http://semweb.mmlab.be/ns/rml#ReferenceFormulation"/>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/CSV"/>
-    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/ql#"/>
-    <rdfs:label>CSV</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/ql#JSONPath">
-    <rdf:type rdf:resource="http://semweb.mmlab.be/ns/rml#ReferenceFormulation"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:comment xml:lang="en">Denotes the JSONPath reference formulation, used for referring to extracts of JSON sources.</rdfs:comment>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/JSONPath"/>
-    <rdfs:label>JSONPath</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/ql#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#tableName">
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/source"/>
-    <rdfs:label xml:lang="en">table name</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Schema-qualified name of a table or view.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#subject">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:label xml:lang="en">subject</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">An IRI reference for use as subject for all the RDF triples generated from a logical table row.</rdfs:comment>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/subjectMap"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#termType">
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/termType"/>
-    <rdfs:comment xml:lang="en">A string indicating whether subject or object generated using the value from column name specified for rr:column should be an IRI reference, blank node, or a literal.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">term type</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#sqlQuery">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">A valid SQL query.</rdfs:comment>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/query"/>
-    <rdfs:label xml:lang="en">SQL query</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#PredicateObjectMap">
-    <rdfs:label xml:lang="en">Predicate Object Map</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/PredicateObjectMap"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">Represents a predicate-object map.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#source">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/source"/>
-    <rdfs:comment xml:lang="en">Qualified name of the source data.</rdfs:comment>
-    <rdfs:label xml:lang="en">source</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#BlankNode">
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/BlankNode"/>
-    <rdfs:comment xml:lang="en">Denotes a blank node, used with termType</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Blank Node</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#column">
-    <rdfs:label xml:lang="en">column</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdfs:comment xml:lang="en">Name of a column in the logical table. When generating RDF triples from a logical table row, value from the specified column is used as the subject, predicate, or object (based upon the specific domain).</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/reference"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#TermMap">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/TermMap"/>
-    <rdfs:label xml:lang="en">Term Map</rdfs:label>
-    <rdfs:comment xml:lang="en">A function that generates an RDF term from a logical table row.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#constant">
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="en">constant</rdfs:label>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/constant"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#logicalTable">
-    <rdfs:comment xml:lang="en">Definition of logical table to be mapped.</rdfs:comment>
-    <rdfs:label xml:lang="en">logical table</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/TriplesMap"/>
-    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/logicalSource"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#class">
-    <rdfs:label xml:lang="en">class</rdfs:label>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/class"/>
-    <rdfs:comment xml:lang="en">The subject value generated for a logical table row will be asserted as an instance of this RDFS class.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/object"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#objectMap">
     <rdfs:label xml:lang="en">object map</rdfs:label>
-    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/objectMap"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/objectMap"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">An ObjectMap element to generate the object component of the (predicate, object) pair from a logical table row.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://creativecommons.org/ns#license">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#subjectMap">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">A PredicateObjectMap element to generate (predicate, object) pair from a logical table row.</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/subject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">subject map</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#child">
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/child"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Names a column in the child table of a join.</rdfs:comment>
+    <rdfs:label xml:lang="en">child</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#joinCondition">
+    <rdfs:comment xml:lang="en">Specifies the join condition for joining the child logical table with the parent logical table of the foreign key constraint.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/graph"/>
+    <rdfs:label xml:lang="en">graph</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#BaseSource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/LogicalSource"/>
+    <rdfs:comment xml:lang="en">Denotes a base source.</rdfs:comment>
+    <rdfs:label xml:lang="en">Base Source</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#TriplesMap">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:label xml:lang="en">Triples Map</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Represents a triples map.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/TriplesMap"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#source">
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/source"/>
+    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment xml:lang="en">Qualified name of the source data.</rdfs:comment>
+    <rdfs:label xml:lang="en">source</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#GraphMap">
+    <rdfs:label xml:lang="en">Graph Map</rdfs:label>
+    <rdfs:label xml:lang="en">Object Map</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/ObjectMap"/>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/GraphMap"/>
+    <rdfs:comment xml:lang="en">Represents a graph map.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Represents an object map.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#datatype">
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/datatype"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Specifies the datatype of the object component for the generated triple from a logical table row.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">datatype</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/rml/core/bc">
+    <vann:preferredNamespaceUri>http://w3id.org/rml/core/bc</vann:preferredNamespaceUri>
+    <dcterms:description xml:lang="en">This module specifies the relationships established by the R2RML and previous RML vocabularies to the new RML specification.</dcterms:description>
+    <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+    <dcterms:creator>Ana Iglesias Molina</dcterms:creator>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:modified>2023-05-02</dcterms:modified>
+    <dcterms:title xml:lang="en">R2RML to RML alignment module</dcterms:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#BaseTableOrView">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/LogicalSource"/>
     <rdfs:comment xml:lang="en">Denotes a base table or view.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label xml:lang="en">Base Table Or View</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#Literal">
-    <owl:equivalentClass rdf:resource="http://w3id.org/rml/Literal"/>
-    <rdfs:label xml:lang="en">Literal</rdfs:label>
-    <rdfs:comment xml:lang="en">Denotes a Literal, used with termType.</rdfs:comment>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#Join">
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/Join"/>
+    <rdfs:comment xml:lang="en">Represents a join condition.</rdfs:comment>
+    <rdfs:label xml:lang="en">Join</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#SQL2008">
+    <rdfs:comment xml:lang="en">Core SQL 2008</rdfs:comment>
+    <rdfs:label>SQL 2008</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/SQL2008"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#reference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
+    <rdfs:label xml:lang="en">inverse expression</rdfs:label>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/reference"/>
+    <rdfs:comment xml:lang="en">A valid expression that selects values from the source data. The reference should conform to the syntax rules/grammar of the specified Reference Formulation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#predicateObjectMap">
+    <rdfs:comment xml:lang="en">A PredicateObjectMap element to generate (predicate, object) pair from a logical table row.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:label xml:lang="en">predicate object map</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/predicate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#predicateMap">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:label xml:lang="en">predicate map</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/predicateMap"/>
+    <rdfs:comment xml:lang="en">A PredicateMap element to generate the predicate component of the (predicate, object) pair from a logical table row.</rdfs:comment>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#graphMap">
-    <rdfs:comment xml:lang="en">Specifies a GraphMap. When used with a SubjectMap element, all the RDF triples generated from a logical row will be stored in the specified named graph. Otherwise, the RDF triple generated using the (predicate, object) pair will be stored in the specified named graph.</rdfs:comment>
     <rdfs:comment xml:lang="en">An IRI reference for use as the graph name of all triples generated with the SubjectMap or PredicateObjectMap.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies a GraphMap. When used with a SubjectMap element, all the RDF triples generated from a logical row will be stored in the specified named graph. Otherwise, the RDF triple generated using the (predicate, object) pair will be stored in the specified named graph.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
     <owl:equivalentProperty rdf:resource="http://w3id.org/rml/graph"/>
-    <rdfs:label xml:lang="en">graph</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">graph</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#RefObjectMap">
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/RefObjectMap"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Denotes a reference to an object map.</rdfs:comment>
+    <rdfs:label xml:lang="en">Reference Object Map</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#iterator">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">an expression qualified according to the reference formulation specified for pointing to an extract of the source data.</rdfs:comment>
     <rdfs:label xml:lang="en">iterator</rdfs:label>
+    <rdfs:comment xml:lang="en">an expression qualified according to the reference formulation specified for pointing to an extract of the source data.</rdfs:comment>
     <owl:equivalentProperty rdf:resource="http://w3id.org/rml/iterator"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/ql#JSONPath">
+    <rdfs:label>JSONPath</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/JSONPath"/>
+    <rdf:type rdf:resource="http://semweb.mmlab.be/ns/rml#ReferenceFormulation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">Denotes the JSONPath reference formulation, used for referring to extracts of JSON sources.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/ql#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/ql#XPath">
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/XPath"/>
+    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/ql#"/>
+    <rdf:type rdf:resource="http://semweb.mmlab.be/ns/rml#ReferenceFormulation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:label>JSONPath</rdfs:label>
+    <rdfs:comment xml:lang="en">Denotes the XPath reference formulation, used for referring to extracts of XML sources.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#IRI">
+    <rdfs:comment xml:lang="en">Denotes an IRI, used with termType.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/IRI"/>
+    <rdfs:label xml:lang="en">IRI</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#tableName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">table name</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Schema-qualified name of a table or view.</rdfs:comment>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/source"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#sqlQuery">
+    <rdfs:label xml:lang="en">SQL query</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/query"/>
+    <rdfs:comment xml:lang="en">A valid SQL query.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#BlankNode">
+    <rdfs:label xml:lang="en">Blank Node</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Denotes a blank node, used with termType</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/BlankNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#subject">
+    <rdfs:label xml:lang="en">subject</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">An IRI reference for use as subject for all the RDF triples generated from a logical table row.</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/subjectMap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#parent">
+    <rdfs:label xml:lang="en">parent</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Names a column in the parent table of a join.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/parent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#logicalSource">
+    <rdfs:comment xml:lang="en">Represents the logical source to be mapped. This can be a pointer to any dataset.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
+    <rdfs:label xml:lang="en">logical source</rdfs:label>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/logicalSource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#LogicalTable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/LogicalSource"/>
+    <rdfs:label xml:lang="en">Logical Table</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Denotes a logical table.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#inverseExpression">
+    <rdfs:comment xml:lang="en">An expression that allows, at query processing time, use of index-based access to the the (underlying) relational tables, instead of simply retrieving the table rows first and then applying a filter. This property is useful for retrieval based on conditions involving subject, predicate, or object generated from logical table column(s) and involves some transformation.</rdfs:comment>
+    <rdfs:label xml:lang="en">inverse expression</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#class">
+    <rdfs:label xml:lang="en">class</rdfs:label>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">The subject value generated for a logical table row will be asserted as an instance of this RDFS class.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#predicate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the predicate for the generated triple from the logical table row.</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/predicate"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:label xml:lang="en">predicate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#R2RMLView">
+    <rdfs:comment xml:lang="en">Denotes an R2RML view.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">R2RML View</rdfs:label>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/LogicalSource"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#logicalTable">
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/TriplesMap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/logicalSource"/>
+    <rdfs:label xml:lang="en">logical table</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Definition of logical table to be mapped.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.linkedmodel.org/schema/vaem#acronym">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#sqlVersion">
+    <rdfs:comment xml:lang="en">An identifier for a SQL version.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/referenceFormulation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:label xml:lang="en">SQL version</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#TermMap">
+    <rdfs:label xml:lang="en">Term Map</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">A function that generates an RDF term from a logical table row.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/TermMap"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/rml/io/bc">
+    <dcterms:creator>Ana Iglesias Molina</dcterms:creator>
+    <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:modified>2023-05-02</dcterms:modified>
+    <dcterms:title xml:lang="en">R2RML to RML alignment module for RML-IO</dcterms:title>
+    <dcterms:description xml:lang="en">This module specifies the relationships established by the R2RML and previous RML vocabularies to the new RML-IO specification.</dcterms:description>
+    <vann:preferredNamespaceUri>http://w3id.org/rml/io/bc</vann:preferredNamespaceUri>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#Literal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Literal</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Denotes a Literal, used with termType.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#PredicateObjectMap">
+    <rdfs:comment xml:lang="en">Represents a predicate-object map.</rdfs:comment>
+    <rdfs:label xml:lang="en">Predicate Object Map</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/PredicateObjectMap"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#column">
+    <rdfs:comment xml:lang="en">Name of a column in the logical table. When generating RDF triples from a logical table row, value from the specified column is used as the subject, predicate, or object (based upon the specific domain).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">column</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <dcterms:isReplacedBy rdf:resource="http://w3id.org/rml/reference"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#TriplesMap">
+    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
+    <rdfs:label xml:lang="en">Triples Map</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Represents a triples map.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/TriplesMap"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#parentTriplesMap">
+    <rdfs:comment xml:lang="en">Specifies the TriplesMap element corresponding to the parent logical table of the foreign key constraint.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/parentTriplesMap"/>
+    <rdfs:label xml:lang="en">parent triples map</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://semweb.mmlab.be/ns/rml#LogicalSource">
+    <rdfs:label xml:lang="en">Logical Source</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://semweb.mmlab.be/ns/rml#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/LogicalSource"/>
+    <rdfs:comment xml:lang="en">Denotes a logical source.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#termType">
+    <rdfs:comment xml:lang="en">A string indicating whether subject or object generated using the value from column name specified for rr:column should be an IRI reference, blank node, or a literal.</rdfs:comment>
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/termType"/>
+    <rdfs:label xml:lang="en">term type</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://creativecommons.org/ns#license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#language">
+    <owl:equivalentProperty rdf:resource="http://w3id.org/rml/language"/>
+    <rdfs:comment xml:lang="en">Specified the language for the object component for the generated triple from a logical table row.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:label xml:lang="en">language</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#SubjectMap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:resource="http://w3id.org/rml/SubjectMap"/>
+    <rdfs:label xml:lang="en">Subject Map</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/r2rml#"/>
+    <rdfs:comment xml:lang="en">Represents a subject map.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
@@ -408,10 +408,10 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
 </rdf:RDF>
