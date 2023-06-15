@@ -6,6 +6,7 @@
 #
 
 import csv
+import requests
 
 HTACCESS_HEADER = """# RML ontology
 Header set Access-Control-Allow-Origin *
@@ -26,9 +27,24 @@ def read_csv():
     return rows
 
 
+def verify_redirections(rows: list):
+    print('=== Verifying redirections ===')
+
+    for r in rows:
+        url = r[1].strip().replace('$1', '')
+        if url == '':
+            continue
+
+        r = requests.head(url)
+        print(f'{url}: HTTP {r.status_code}')
+        r.raise_for_status()
+
+
 def generate_htaccess(rows: list):
     rules: dict = {}
     header = 'ROOT'
+
+    print('=== Generating .htaccess file ===')
 
     for r in rows:
         # Header
@@ -58,4 +74,5 @@ def generate_htaccess(rows: list):
 
 if __name__ == '__main__':
     rows = read_csv()
+    verify_redirections(rows)
     generate_htaccess(rows)
