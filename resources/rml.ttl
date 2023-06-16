@@ -1,0 +1,50 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@base <http://w3id.org/rml/> .
+
+dc:contributor a owl:AnnotationProperty .
+dc:creator a owl:AnnotationProperty .
+dc:description a owl:AnnotationProperty .
+dc:issued a owl:AnnotationProperty .
+dc:modified a owl:AnnotationProperty .
+dc:publisher a owl:AnnotationProperty .
+dc:title a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+bibo:status a owl:AnnotationProperty .
+
+<http://w3id.org/rml/> a owl:Ontology ;
+  dc:title "RML RDF Mapping Language"@en ;
+  dc:description "The main RML ontology imports all the RML modules: RML-Core (schema transformations), RML-IO (source and target description), RML-CC (collections and containers), RML-FNML (data transformation functions) and RML-star (RDF-star graphs generation)."@en ;
+  dc:contributor "Ana Iglesias Molina",
+      "Anastasia Dimou",
+      "Ben de Meester",
+      "Christophe Debruyne",
+      "David Chaves Fraga",
+      "Dylan Van Assche",
+      "Franck Michel",
+      "Julián Arenas Guerrero",
+      "Pano Maria",
+      "Samaneh Jozashoori" ;
+  dc:created "2023-03-14" ;
+  dc:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+  dc:modified "2023-06-16" ;
+  dc:publisher <https://www.w3.org/community/kg-construct/> ;
+  bibo:status "draft" ;
+  vann:preferredNamespacePrefix "rml" ;
+  vann:preferredNamespaceUri "http://w3id.org/rml/" ;
+  owl:versionIRI <http://w3id.org/rml/> ;
+  owl:versionInfo "0.1.0" ;
+  owl:imports <http://w3id.org/rml/core> ,
+              <http://w3id.org/rml/io> ,
+              <http://w3id.org/rml/cc> ,
+              <http://w3id.org/rml/fnml> ,
+              <http://w3id.org/rml/star> .
