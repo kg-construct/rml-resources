@@ -7,64 +7,90 @@
 
 import csv
 import requests
+from typing import List
 
-HTACCESS_HEADER = """# RML ontology
-Header set Access-Control-Allow-Origin *
-Header set Access-Control-Allow-Headers DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified$
-Options +FollowSymLinks
-Options -MultiViews
-
-AddType application/rdf+xml .rdf
-AddType application/rdf+xml .owl
-AddType text/turtle .ttl
-AddType application/n-triples .n3
-AddType application/ld+json .jsonld
-
+HEADER = """# RML Ontology
 RewriteEngine on
+DirectorySlash Off
 
+## RML Ontology content negotiation
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-$2/ontology/documentation/index-en.html#http://w3id.org/$1 [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} application/ld\\+json
+RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-$2/ontology/documentation/ontology.jsonld#http://w3id.org/$1 [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} application/n-triples
+RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-$2/ontology/documentation/ontology.nt#http://w3id.org/$1 [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} application/rdf\\+xml
+RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-$2/ontology/documentation/ontology.rdf#http://w3id.org/$1 [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-$2/ontology/documentation/ontology.ttl#http://w3id.org/$1 [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} .+\n
+RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-resources/406.html [NE,L,R=406]
 """
 
 
-def template_html(resource: str, url: str):
+def extract_spec(url: str):
+    spec = None
+    if 'rml-core' in url:
+        spec = 'core'
+    elif 'rml-cc' in url:
+        spec = 'cc'
+    elif 'rml-io' in url:
+        spec = 'io'
+    elif 'rml-fnml' in url:
+        spec = 'fnml'
+    elif 'rml-star' in url:
+        spec = 'star'
+    else:
+        raise NotImplementedError(f'No spec matches this URL: {url}')
+
+    return spec
+
+
+def template_resources(resources: List[str], spec: str):
     return \
-        'RewriteCond %{HTTP_ACCEPT} !application/rdf\\+xml.*(text/html|application/xhtml\\+xml)\n' \
-        'RewriteCond %{HTTP_ACCEPT} text/html [OR]\n' \
-        'RewriteCond %{HTTP_ACCEPT} application/xhtml\\+xml [OR]\n' \
-        'RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*\n' \
-        f'RewriteRule ^{resource}/?$ {url} [NE,L,R=301]\n'
+        'RewriteCond %{REQUEST_URI} ^/rml/(' + '|'.join(resources) + ')$\n' \
+        'RewriteRule ^rml/(.*)$ /rml/$1.' + spec + '.conneg [NE,R,L]\n'
 
 
-def template_jsonld(resource: str, url: str, replace_from: str, replace_to: str):
+def template_ontology(spec: str):
     return \
-        'RewriteCond %{HTTP_ACCEPT} application/ld\\+json\n' \
-        f'RewriteRule ^{resource}/?$ {url.replace(replace_from, replace_to)} [NE,L,R=301]\n'
+        'RewriteCond %{REQUEST_URI} ^/rml/' + spec + '\n' \
+        'RewriteRule ^rml/' + spec + \
+        '/?$ https://kg-construct.github.io/rml-' + spec + \
+        '/ontology/documentation/index-en.html [NE,R,L]'
 
 
-def template_rdfxml(resource: str, url: str, replace_from: str, replace_to: str):
+def template_shapes(spec: str):
     return \
-        'RewriteCond %{HTTP_ACCEPT} \\*/\\* [OR]\n' \
-        'RewriteCond %{HTTP_ACCEPT} application/rdf\\+xml\n' \
-        f'RewriteRule ^{resource}/?$ {url.replace(replace_from, replace_to)} [NE,L,R=301]\n'
+        'RewriteCond %{REQUEST_URI} ^/rml/' + spec + '/shapes\n' \
+        'RewriteRule ^rml/' + spec + \
+        '/shapes/?$ https://kg-construct.github.io/rml-' + spec + \
+        '/shapes/' + spec + '.ttl [NE,R,L]'
 
 
-def template_ntriples(resource: str, url: str, replace_from: str, replace_to: str):
+def template_spec(spec: str):
     return \
-        'RewriteCond %{HTTP_ACCEPT} application/n-triples\n' \
-        f'RewriteRule ^{resource}/?$ {url.replace(replace_from, replace_to)} [NE,L,R=301]\n'
+        'RewriteCond %{REQUEST_URI} ^/rml/' + spec + '/spec\n' \
+        'RewriteRule ^rml/' + spec + \
+        '/spec/?$ https://kg-construct.github.io/rml-' + spec + \
+        '/spec/docs [NE,R,L]'
 
 
-def template_turtle(resource: str, url: str, replace_from: str, replace_to: str):
+def template_bc(spec: str):
     return \
-        'RewriteCond %{HTTP_ACCEPT} text/turtle [OR]\n' \
-        'RewriteCond %{HTTP_ACCEPT} text/\\* [OR]\n' \
-        'RewriteCond %{HTTP_ACCEPT} \\*/turtle\n' \
-        f'RewriteRule ^{resource}/?$ {url.replace(replace_from, replace_to)} [NE,L,R=301]\n'
+        'RewriteCond %{REQUEST_URI} ^/rml/' + spec + '/bc\n' \
+        'RewriteRule ^rml/' + spec + \
+        '/bc/?$ https://kg-construct.github.io/rml-' + spec + \
+        '/ontology/rml-' + spec + '-bc.ttl [NE,R,L]'
 
 
-def template_notacceptable(resource: str, url: str, replace_from: str, replace_to: str):
+def template_notacceptable(resource: str, url: str, replace_from: str,
+                           replace_to: str):
     return \
         'RewriteCond %{HTTP_ACCEPT} .+\n' \
-        f'RewriteRule ^{resource}/?$ {url.replace(replace_from, replace_to)} [NE,L,R=406]\n'
+        f'RewriteRule ^{resource}/?$ {url.replace(replace_from, replace_to)}' \
+        ' [NE,L,R=406]\n'
 
 
 def template_redirect(resource: str, url: str):
@@ -95,15 +121,28 @@ def verify_redirections(rows: list):
 
 
 def generate_htaccess(rows: list):
-    rules: dict = {}
-    header = 'ROOT'
-
     print('=== Generating .htaccess file ===')
+
+    resources: dict = {
+        'core': [],
+        'io': [],
+        'cc': [],
+        'fnml': [],
+        'star': []
+    }
+    rules: dict = {
+        'eval17': [],
+        'core': [],
+        'io': [],
+        'cc': [],
+        'fnml': [],
+        'star': [],
+        'resources': []
+    }
 
     for r in rows:
         # Header
         if 'w3id.org/rml' not in r[0]:
-            header = r[0]
             continue
 
         # Redirect
@@ -112,157 +151,50 @@ def generate_htaccess(rows: list):
         else:
             resource = r[0].replace('w3id.org/rml/', '').strip()
         url = r[1].strip()
-        if header not in rules:
-            rules[header] = []
 
-        rules[header].append(f'\n# {resource} ==> {url}')
-
-        if 'index-en.html' in url:
-            rules[header].append(template_html(resource, url))
-            rules[header].append(template_jsonld(resource, url,
-                                                 'index-en.html',
-                                                 'ontology.jsonld'))
-            rules[header].append(template_rdfxml(resource, url,
-                                                 'index-en.html',
-                                                 'ontology.rdf'))
-            rules[header].append(template_ntriples(resource, url,
-                                                   'index-en.html',
-                                                   'ontology.nt'))
-            rules[header].append(template_turtle(resource, url,
-                                                 'index-en.html',
-                                                 'ontology.ttl'))
-            rules[header].append(template_notacceptable(resource, url,
-                                                        'index-en.html',
-                                                        '406.html'))
-        elif '/shapes/' in url:
-            rules[header].append(template_jsonld(resource, url,
-                                                 '.ttl',
-                                                 '.jsonld'))
-            rules[header].append(template_rdfxml(resource, url,
-                                                 '.ttl',
-                                                 '.rdf'))
-            rules[header].append(template_ntriples(resource, url,
-                                                   '.ttl',
-                                                   '.nt'))
-            rules[header].append(template_turtle(resource, url,
-                                                 '.ttl',
-                                                 '.ttl'))
-            if 'core.ttl' in url:
-                rules[header].append(template_notacceptable(resource, url,
-                                                            'core.ttl',
-                                                            '406.html'))
-            elif 'io.ttl' in url:
-                rules[header].append(template_notacceptable(resource, url,
-                                                            'io.ttl',
-                                                            '406.html'))
-            elif 'star.ttl' in url:
-                rules[header].append(template_notacceptable(resource, url,
-                                                            'star.ttl',
-                                                            '406.html'))
-            elif 'cc.ttl' in url:
-                rules[header].append(template_notacceptable(resource, url,
-                                                            'cc.ttl',
-                                                            '406.html'))
-            elif 'fnml.ttl' in url:
-                rules[header].append(template_notacceptable(resource, url,
-                                                            'fnml.ttl',
-                                                            '406.html'))
-            else:
-                raise NotImplementedError(f'No shape rule for {url}!')
-        elif '/spec/docs' in url:
-            rules[header].append(template_redirect(resource, url))
-        elif 'rml-resources/ontology.ttl' in url:
-            rules[header].append(template_jsonld(resource, url,
-                                                 'ontology.ttl',
-                                                 'ontology.jsonld'))
-            rules[header].append(template_rdfxml(resource, url,
-                                                 'ontology.ttl',
-                                                 'ontology.rdf'))
-            rules[header].append(template_ntriples(resource, url,
-                                                   'ontology.ttl',
-                                                   'ontology.nt'))
-            rules[header].append(template_turtle(resource, url,
-                                                 'ontology.ttl',
-                                                 'ontology.ttl'))
-            rules[header].append(template_notacceptable(resource, url,
-                                                        'ontology.ttl',
-                                                        '406.html'))
+        if resource not in ['core', 'io', 'cc', 'fnml', 'star'] \
+                and 'index-en.html' in url:
+            spec = extract_spec(url)
+            resources[spec].append(resource)
+        elif 'index-en.html' in url:
+            spec = extract_spec(url)
+            rules[spec].append(template_ontology(spec))
+            rules[spec].append(template_spec(spec))
+            rules[spec].append(template_shapes(spec))
+        elif 'rml-resources' in url:
+            rules['resources'].append(template_redirect('rml/' + resource,
+                                                        url))
         elif 'rml-resources/backwards-compatibility.ttl' in url:
-            rules[header].append(template_jsonld(resource, url,
-                                                 'backwards-compatibility.ttl',
-                                                 'backwards-compatibility.jsonld'))
-            rules[header].append(template_rdfxml(resource, url,
-                                                 'backwards-compatibility.ttl',
-                                                 'backwards-compatibility.rdf'))
-            rules[header].append(template_ntriples(resource, url,
-                                                   'backwards-compatibility.ttl',
-                                                   'backwards-compatibility.nt'))
-            rules[header].append(template_turtle(resource, url,
-                                                 'backwards-compatibility.ttl',
-                                                 'backwards-compatibility.ttl'))
-            rules[header].append(template_notacceptable(resource, url,
-                                                        'backwards-compatibility.ttl',
-                                                        '406.html'))
+            pass
         elif 'rml-resources/shapes.ttl' in url:
-            rules[header].append(template_jsonld(resource, url,
-                                                 'shapes.ttl',
-                                                 'shapes.jsonld'))
-            rules[header].append(template_rdfxml(resource, url,
-                                                 'shapes.ttl',
-                                                 'shapes.rdf'))
-            rules[header].append(template_ntriples(resource, url,
-                                                   'shapes.ttl',
-                                                   'shapes.nt'))
-            rules[header].append(template_turtle(resource, url,
-                                                 'shapes.ttl',
-                                                 'shapes.ttl'))
-            rules[header].append(template_notacceptable(resource, url,
-                                                        'shapes.ttl',
-                                                        '406.html'))
+            pass
         elif 'rml-resources/resources' in url:
-            rules[header].append(template_redirect(resource, url))
+            pass
         elif 'rml-resources/portal' in url:
-            rules[header].append(template_redirect(resource, url))
+            pass
         elif '-bc.ttl' in url:
-            rules[header].append(template_jsonld(resource, url,
-                                                 '-bc.ttl',
-                                                 '-bc.jsonld'))
-            rules[header].append(template_rdfxml(resource, url,
-                                                 '-bc.ttl',
-                                                 '-bc.rdf'))
-            rules[header].append(template_ntriples(resource, url,
-                                                   '-bc.ttl',
-                                                   '-bc.nt'))
-            rules[header].append(template_turtle(resource, url,
-                                                 '-bc.ttl',
-                                                 '-bc.ttl'))
-            if 'rml-core' in url:
-                rules[header].append(template_notacceptable(resource, url,
-                                                            'rml-core-bc.ttl',
-                                                            '406.html'))
-            elif 'rml-io' in url:
-                rules[header].append(template_notacceptable(resource, url,
-                                                            'rml-io-bc.ttl',
-                                                            '406.html'))
-            else:
-                raise NotImplementedError(f'No bc rule for {url}!')
+            spec = extract_spec(url)
+            rules[spec].append(template_bc(spec))
         elif 'eval17' in url:
-            rules[header].append(template_redirect(resource, url))
-        else:
-            raise NotImplementedError(f'No rules for {url}!')
+            rules['eval17'].append(template_redirect(resource, url))
 
+    for spec in ['core', 'io', 'cc', 'fnml', 'star']:
+        rules[spec].append(template_resources(resources[spec], spec))
 
     with open('redirections.htaccess', 'w') as f:
-        f.write(HTACCESS_HEADER)
-        for header in rules.keys():
-            f.write(f'# === RML {header} ===\n')
-            for r in rules[header]:
+        f.write(HEADER)
+        for key in sorted(rules.keys()):
+            f.write(f'# === RML {key} ===\n')
+            for r in rules[key]:
                 f.write(r + '\n')
             f.write('\n')
+        f.write('RewriteRule ^rml/(.*)$' +
+                ' https://kg-construct.github.io/rml-resources/404.html' +
+                ' [NE,L,R=404]\n')
         f.flush()
 
 
 if __name__ == '__main__':
     rows = read_csv()
-    #verify_redirections(rows)
+    # verify_redirections(rows)
     generate_htaccess(rows)
