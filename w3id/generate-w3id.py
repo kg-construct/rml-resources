@@ -13,7 +13,18 @@ HEADER = """# RML Ontology
 RewriteEngine on
 DirectorySlash Off
 
-## RML Ontology content negotiation
+## RML Ontology content negotation
+RewriteCond %{HTTP_ACCEPT} application/ld\\+json
+RewriteRule ^(.*)\\.resource.conneg$ https://kg-construct.github.io/rml-resources/$1.json [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} application/n-triples
+RewriteRule ^(.*)\\.resource.conneg$ https://kg-construct.github.io/rml-resources/$1.nt [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} application/rdf\\+xml
+RewriteRule ^(.*)\\.resource.conneg$ https://kg-construct.github.io/rml-resources/$1.rdf [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule ^(.*)\\.resource.conneg$ https://kg-construct.github.io/rml-resources/$1.ttl [NE,R,L]
+RewriteCond %{HTTP_ACCEPT} .+\n
+
+## RML Ontology content negotiation resources
 RewriteCond %{HTTP_ACCEPT} text/html
 RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-$2/ontology/documentation/index-en.html#http://w3id.org/$1 [NE,R,L]
 RewriteCond %{HTTP_ACCEPT} application/ld\\+json
@@ -25,7 +36,7 @@ RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.i
 RewriteCond %{HTTP_ACCEPT} text/turtle
 RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-$2/ontology/documentation/ontology.ttl#http://w3id.org/$1 [NE,R,L]
 RewriteCond %{HTTP_ACCEPT} .+\n
-RewriteRule ^(.*)\\.(core|io|cc|fnml|star).conneg$ https://kg-construct.github.io/rml-resources/406.html [NE,L,R=406]
+RewriteRule (.*)\\.(core|io|cc|fnml|star|resource).conneg$ https://kg-construct.github.io/rml-resources/406.html [NE,L,R=406]
 """
 
 
@@ -49,38 +60,37 @@ def extract_spec(url: str):
 
 def template_resources(resources: List[str], spec: str):
     return \
-        'RewriteCond %{REQUEST_URI} ^/rml/(' + '|'.join(resources) + ')$\n' \
-        'RewriteRule ^rml/(.*)$ /rml/$1.' + spec + '.conneg [NE,R,L]\n'
-
+        'RewriteCond %{REQUEST_URI} (' + '|'.join(resources) + ')$\n' \
+        'RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1.' + spec + '.conneg [NE,R,L]\n'
 
 def template_ontology(spec: str):
     return \
-        'RewriteCond %{REQUEST_URI} ^/rml/' + spec + '\n' \
-        'RewriteRule ^rml/' + spec + \
+        'RewriteCond %{REQUEST_URI} ' + spec + '\n' \
+        'RewriteRule ' + spec + \
         '/?$ https://kg-construct.github.io/rml-' + spec + \
         '/ontology/documentation/index-en.html [NE,R,L]'
 
 
 def template_shapes(spec: str):
     return \
-        'RewriteCond %{REQUEST_URI} ^/rml/' + spec + '/shapes\n' \
-        'RewriteRule ^rml/' + spec + \
+        'RewriteCond %{REQUEST_URI} ' + spec + '/shapes\n' \
+        'RewriteRule ' + spec + \
         '/shapes/?$ https://kg-construct.github.io/rml-' + spec + \
         '/shapes/' + spec + '.ttl [NE,R,L]'
 
 
 def template_spec(spec: str):
     return \
-        'RewriteCond %{REQUEST_URI} ^/rml/' + spec + '/spec\n' \
-        'RewriteRule ^rml/' + spec + \
+        'RewriteCond %{REQUEST_URI} ' + spec + '/spec\n' \
+        'RewriteRule ' + spec + \
         '/spec/?$ https://kg-construct.github.io/rml-' + spec + \
         '/spec/docs [NE,R,L]'
 
 
 def template_bc(spec: str):
     return \
-        'RewriteCond %{REQUEST_URI} ^/rml/' + spec + '/bc\n' \
-        'RewriteRule ^rml/' + spec + \
+        'RewriteCond %{REQUEST_URI} ' + spec + '/bc\n' \
+        'RewriteRule ' + spec + \
         '/bc/?$ https://kg-construct.github.io/rml-' + spec + \
         '/ontology/rml-' + spec + '-bc.ttl [NE,R,L]'
 
@@ -89,12 +99,22 @@ def template_notacceptable(resource: str, url: str, replace_from: str,
                            replace_to: str):
     return \
         'RewriteCond %{HTTP_ACCEPT} .+\n' \
-        f'RewriteRule ^{resource}/?$ {url.replace(replace_from, replace_to)}' \
+        f'RewriteRule {resource}/?$ {url.replace(replace_from, replace_to)}' \
         ' [NE,L,R=406]\n'
 
 
 def template_redirect(resource: str, url: str):
-    return f'RewriteRule ^{resource}/?$ {url} [NE,L,R=301]\n'
+    return f'RewriteRule {resource}/?$ {url} [NE,L,R=301]\n'
+
+
+def template_redirect_negotiate(resource: str, name: str, root: bool):
+    if root:
+        return \
+            'RewriteRule ^$ https://%{SERVER_NAME}/' + name + '.resource.conneg [NE,R,L]\n'
+    else:
+        return \
+            'RewriteCond %{REQUEST_URI} ' + resource + '$\n' \
+            'RewriteRule (.*)$ https://%{SERVER_NAME}/' + name + '.resource.conneg [NE,R,L]\n'
 
 
 def read_csv():
@@ -161,17 +181,17 @@ def generate_htaccess(rows: list):
             rules[spec].append(template_ontology(spec))
             rules[spec].append(template_spec(spec))
             rules[spec].append(template_shapes(spec))
+        elif 'rml-resources/ontology.ttl' in url or \
+             'rml-resources/backwards-compatibility.ttl' in url or \
+             'rml-resources/shapes.ttl' in url:
+            name = url.split('/')[-1].replace('.ttl', '')
+            root = False
+            if 'rml-resources/ontology.ttl' in url:
+                root = True
+            rules['resources'].append(template_redirect_negotiate(resource,
+                                                                  name, root))
         elif 'rml-resources' in url:
-            rules['resources'].append(template_redirect('rml/' + resource,
-                                                        url))
-        elif 'rml-resources/backwards-compatibility.ttl' in url:
-            pass
-        elif 'rml-resources/shapes.ttl' in url:
-            pass
-        elif 'rml-resources/resources' in url:
-            pass
-        elif 'rml-resources/portal' in url:
-            pass
+            rules['resources'].append(template_redirect(resource, url))
         elif '-bc.ttl' in url:
             spec = extract_spec(url)
             rules[spec].append(template_bc(spec))
@@ -188,7 +208,7 @@ def generate_htaccess(rows: list):
             for r in rules[key]:
                 f.write(r + '\n')
             f.write('\n')
-        f.write('RewriteRule ^rml/(.*)$' +
+        f.write('RewriteRule ^(.*)$' +
                 ' https://kg-construct.github.io/rml-resources/404.html' +
                 ' [NE,L,R=404]\n')
         f.flush()
