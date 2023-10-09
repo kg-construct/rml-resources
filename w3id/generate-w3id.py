@@ -61,7 +61,8 @@ def extract_spec(url: str):
 def template_resources(resources: List[str], spec: str):
     return \
         'RewriteCond %{REQUEST_URI} (' + '|'.join(resources) + ')$\n' \
-        'RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1.' + spec + '.conneg [NE,R,L]\n'
+        'RewriteRule ^(.*)$ https://%{SERVER_NAME}/rml/$1.' + spec + '.conneg [NE,R,L]\n'
+
 
 def template_ontology(spec: str):
     return \
@@ -110,11 +111,11 @@ def template_redirect(resource: str, url: str):
 def template_redirect_negotiate(resource: str, name: str, root: bool):
     if root:
         return \
-            'RewriteRule ^$ https://%{SERVER_NAME}/' + name + '.resource.conneg [NE,R,L]\n'
+            'RewriteRule ^$ https://%{SERVER_NAME}/rml/' + name + '.resource.conneg [NE,R,L]\n'
     else:
         return \
             'RewriteCond %{REQUEST_URI} ' + resource + '$\n' \
-            'RewriteRule (.*)$ https://%{SERVER_NAME}/' + name + '.resource.conneg [NE,R,L]\n'
+            'RewriteRule (.*)$ https://%{SERVER_NAME}/rml/' + name + '.resource.conneg [NE,R,L]\n'
 
 
 def read_csv():
