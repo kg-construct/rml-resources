@@ -18,6 +18,7 @@ ONTOLOGY_URLS = {
     'cc.owl':   'https://kg-construct.github.io/rml-cc/ontology/rml-cc.owl',
     'fnml.owl': 'https://kg-construct.github.io/rml-fnml/ontology/rml-fnml.owl',
     'star.owl': 'https://kg-construct.github.io/rml-star/ontology/rml-star.owl',
+    'lv.owl': 'https://kg-construct.github.io/rml-lv/ontology/rml-lv.owl',
 }
 ONTOLOGY_TTL = '../ontology.ttl'
 ONTOLOGY_RDF = '../ontology.rdf'

@@ -18,6 +18,7 @@ SHAPE_URLS = {
     'cc.ttl':   'https://kg-construct.github.io/rml-cc/shapes/cc.ttl',
     'fnml.ttl': 'https://kg-construct.github.io/rml-fnml/shapes/fnml.ttl',
     'star.ttl': 'https://kg-construct.github.io/rml-star/shapes/star.ttl',
+    'lv.ttl': 'https://kg-construct.github.io/rml-lv/shapes/lv.ttl',
 }
 SHAPE_TTL = '../shapes.ttl'
 SHAPE_RDF = '../shapes.rdf'
