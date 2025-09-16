@@ -47,4 +47,5 @@ bibo:status a owl:AnnotationProperty .
               <http://w3id.org/rml/io> ,
               <http://w3id.org/rml/cc> ,
               <http://w3id.org/rml/fnml> ,
-              <http://w3id.org/rml/star> .
+              <http://w3id.org/rml/star> ,
+              <http://w3id.org/rml/lv> .

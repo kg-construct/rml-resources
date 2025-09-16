@@ -55,59 +55,61 @@ ql:XPath a oldrml:ReferenceFormulation,
 
 oldrml:BaseSource a owl:Class ;
     rdfs:label "Base Source"@en ;
-    dcterms:isReplacedBy rml:LogicalSource ;
     rdfs:comment "Denotes a base source."@en ;
-    rdfs:isDefinedBy oldrml: .
+    rdfs:isDefinedBy oldrml: ;
+    owl:subClassOf rml:LogicalSource .
 
 oldrml:LogicalSource a owl:Class ;
     rdfs:label "Logical Source"@en ;
     rdfs:comment "Denotes a logical source."@en ;
     rdfs:isDefinedBy oldrml: ;
-    owl:equivalentClass rml:LogicalSource .
+    owl:subClassOf rml:LogicalSource .
 
 oldrml:TriplesMap a owl:Class ;
     rdfs:label "Triples Map"@en ;
     rdfs:comment "Represents a triples map."@en ;
     rdfs:isDefinedBy oldrml: ;
-    owl:equivalentClass rml:TriplesMap .
+    owl:subClassOf rml:TriplesMap .
 
 oldrml:iterator a owl:DatatypeProperty ;
     rdfs:label "iterator"@en ;
     rdfs:comment "an expression qualified according to the reference formulation specified for pointing to an extract of the source data."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:iterator .
+    owl:subPropertyOf rml:iterator .
 
 oldrml:logicalSource a owl:ObjectProperty ;
     rdfs:label "logical source"@en ;
     rdfs:comment "Represents the logical source to be mapped. This can be a pointer to any dataset."@en ;
     rdfs:isDefinedBy oldrml: ;
-    owl:equivalentProperty rml:logicalSource .
+    owl:subPropertyOf rml:logicalSource .
 
 oldrml:reference a owl:DatatypeProperty ;
     rdfs:label "inverse expression"@en ;
     rdfs:comment "A valid expression that selects values from the source data. The reference should conform to the syntax rules/grammar of the specified Reference Formulation."@en ;
     rdfs:isDefinedBy oldrml: ;
-    owl:equivalentProperty rml:reference .
+    owl:subPropertyOf rml:reference .
 
 oldrml:source a rdf:Property ;
     rdfs:label "source"@en ;
-    dcterms:isReplacedBy rml:source ;
     rdfs:comment "Qualified name of the source data."@en ;
-    rdfs:isDefinedBy oldrml: .
+    rdfs:isDefinedBy oldrml: ;
+    owl:subPropertyOf rml:source .
 
 <http://w3id.org/rml/core/bc> a owl:Ontology ;
-    dcterms:creator "Ana Iglesias Molina" ;
-    dcterms:description "This module specifies the relationships established by the R2RML and previous RML vocabularies to the new RML specification."@en ;
+    dcterms:created "2023-05-02" ;
+    dcterms:creator "Ana Iglesias-Molina" ;
+    dcterms:description "This module specifies the relationships established by the R2RML and legacy RML vocabularies to the new RML specification."@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2023-05-02" ;
+    dcterms:modified "2023-06-19" ;
     dcterms:title "R2RML to RML alignment module"@en ;
     vann:preferredNamespaceUri "http://w3id.org/rml/core/bc" .
 
 <http://w3id.org/rml/io/bc> a owl:Ontology ;
+    dcterms:created "2023-05-02" ;
     dcterms:creator "Ana Iglesias Molina" ;
     dcterms:description "This module specifies the relationships established by the R2RML and previous RML vocabularies to the new RML-IO specification."@en ;
     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    dcterms:modified "2023-05-02" ;
+    dcterms:modified "2023-06-19" ;
     dcterms:title "R2RML to RML alignment module for RML-IO"@en ;
     vann:preferredNamespaceUri "http://w3id.org/rml/io/bc" .
 
@@ -115,9 +117,9 @@ oldrml:source a rdf:Property ;
 
 rr:BaseTableOrView a owl:Class ;
     rdfs:label "Base Table Or View"@en ;
-    dcterms:isReplacedBy rml:LogicalSource ;
     rdfs:comment "Denotes a base table or view."@en ;
-    rdfs:isDefinedBy rr: .
+    rdfs:isDefinedBy rr: ;
+    owl:subClassOf rml:LogicalSource .
 
 rr:BlankNode a owl:Class ;
     rdfs:label "Blank Node"@en ;
@@ -126,13 +128,10 @@ rr:BlankNode a owl:Class ;
     owl:equivalentClass rml:BlankNode .
 
 rr:GraphMap a owl:Class ;
-    rdfs:label "Graph Map"@en,
-        "Object Map"@en ;
-    rdfs:comment "Represents a graph map."@en,
-        "Represents an object map."@en ;
+    rdfs:label "Graph Map"@en ;
+    rdfs:comment "Represents a graph map."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentClass rml:GraphMap,
-        rml:ObjectMap .
+    owl:equivalentClass rml:GraphMap .
 
 rr:IRI a owl:Class ;
     rdfs:label "IRI"@en ;
@@ -144,7 +143,7 @@ rr:Join a owl:Class ;
     rdfs:label "Join"@en ;
     rdfs:comment "Represents a join condition."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentClass rml:Join .
+    owl:subClassOf rml:Join .
 
 rr:Literal a owl:Class ;
     rdfs:label "Literal"@en ;
@@ -154,9 +153,15 @@ rr:Literal a owl:Class ;
 
 rr:LogicalTable a owl:Class ;
     rdfs:label "Logical Table"@en ;
-    dcterms:isReplacedBy rml:LogicalSource ;
     rdfs:comment "Denotes a logical table."@en ;
-    rdfs:isDefinedBy rr: .
+    rdfs:isDefinedBy rr: ;
+    owl:subClassOf rml:LogicalSource .
+
+rr:ObjectMap a owl:Class ;
+    rdfs:label "Object Map"@en ;
+    rdfs:comment "Represents an object map."@en ;
+    rdfs:isDefinedBy rr: ;
+    owl:subClassOf rml:ObjectMap .
 
 rr:PredicateMap a owl:Class ;
     rdfs:label "Predicate Map"@en ;
@@ -168,23 +173,24 @@ rr:PredicateObjectMap a owl:Class ;
     rdfs:label "Predicate Object Map"@en ;
     rdfs:comment "Represents a predicate-object map."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentClass rml:PredicateObjectMap .
+    owl:subClassOf rml:PredicateObjectMap .
 
 rr:R2RMLView a owl:Class ;
     rdfs:label "R2RML View"@en ;
-    dcterms:isReplacedBy rml:LogicalSource ;
     rdfs:comment "Denotes an R2RML view."@en ;
-    rdfs:isDefinedBy rr: .
+    rdfs:isDefinedBy rr: ;
+    owl:subClassOf rml:LogicalSource .
 
 rr:RefObjectMap a owl:Class ;
     rdfs:label "Reference Object Map"@en ;
     rdfs:comment "Denotes a reference to an object map."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentClass rml:RefObjectMap .
+    owl:subClassOf rml:RefObjectMap .
 
 rr:SQL2008 a owl:NamedIndividual ;
     rdfs:label "SQL 2008" ;
-    dcterms:isReplacedBy rml:SQL2008 ;
+    dcterms:isReplacedBy rml:SQL2008Query,
+        rml:SQL2008Table ;
     rdfs:comment "Core SQL 2008"@en ;
     rdfs:isDefinedBy rr: .
 
@@ -198,19 +204,19 @@ rr:TermMap a owl:Class ;
     rdfs:label "Term Map"@en ;
     rdfs:comment "A function that generates an RDF term from a logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentClass rml:TermMap .
+    owl:subClassOf rml:TermMap .
 
 rr:TriplesMap a owl:Class ;
     rdfs:label "Triples Map"@en ;
     rdfs:comment "Represents a triples map."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentClass rml:TriplesMap .
+    owl:subClassOf rml:TriplesMap .
 
 rr:child a owl:DatatypeProperty ;
     rdfs:label "child"@en ;
     rdfs:comment "Names a column in the child table of a join."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:child .
+    owl:subPropertyOf rml:child .
 
 rr:class a owl:ObjectProperty ;
     rdfs:label "class"@en ;
@@ -220,20 +226,20 @@ rr:class a owl:ObjectProperty ;
 
 rr:column a owl:DatatypeProperty ;
     rdfs:label "column"@en ;
-    dcterms:isReplacedBy rml:reference ;
     rdfs:comment "Name of a column in the logical table. When generating RDF triples from a logical table row, value from the specified column is used as the subject, predicate, or object (based upon the specific domain)."@en ;
-    rdfs:isDefinedBy rr: .
+    rdfs:isDefinedBy rr: ;
+    owl:subPropertyOf rml:reference .
 
 rr:constant a owl:ObjectProperty ;
     rdfs:label "constant"@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:constant .
+    owl:subPropertyOf rml:constant .
 
 rr:datatype a owl:ObjectProperty ;
     rdfs:label "datatype"@en ;
     rdfs:comment "Specifies the datatype of the object component for the generated triple from a logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:datatype .
+    owl:subPropertyOf rml:datatype .
 
 rr:graph a owl:ObjectProperty ;
     rdfs:label "graph"@en ;
@@ -247,7 +253,7 @@ rr:graphMap a owl:ObjectProperty ;
     rdfs:comment "An IRI reference for use as the graph name of all triples generated with the SubjectMap or PredicateObjectMap."@en,
         "Specifies a GraphMap. When used with a SubjectMap element, all the RDF triples generated from a logical row will be stored in the specified named graph. Otherwise, the RDF triple generated using the (predicate, object) pair will be stored in the specified named graph."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:graph .
+    owl:equivalentProperty rml:graphMap .
 
 rr:inverseExpression a owl:DatatypeProperty ;
     rdfs:label "inverse expression"@en ;
@@ -259,98 +265,103 @@ rr:joinCondition a owl:ObjectProperty ;
     rdfs:label "graph"@en ;
     rdfs:comment "Specifies the join condition for joining the child logical table with the parent logical table of the foreign key constraint."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:graph .
+    owl:equivalentProperty rml:joinCondition .
 
 rr:language a owl:DatatypeProperty ;
     rdfs:label "language"@en ;
     rdfs:comment "Specified the language for the object component for the generated triple from a logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:language .
+    owl:subPropertyOf rml:language .
 
 rr:logicalTable a owl:ObjectProperty ;
     rdfs:label "logical table"@en ;
-    dcterms:isReplacedBy rml:logicalSource ;
     rdfs:comment "Definition of logical table to be mapped."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:TriplesMap .
+    owl:subPropertyOf rml:logicalSource .
 
 rr:object a owl:ObjectProperty ;
     rdfs:label "object"@en ;
     rdfs:comment "Specifies the object for the generated triple from the logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:object .
+    owl:subPropertyOf rml:object .
 
 rr:objectMap a owl:ObjectProperty ;
     rdfs:label "object map"@en ;
     rdfs:comment "An ObjectMap element to generate the object component of the (predicate, object) pair from a logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:objectMap .
+    owl:subPropertyOf rml:objectMap .
 
 rr:parent a owl:DatatypeProperty ;
     rdfs:label "parent"@en ;
     rdfs:comment "Names a column in the parent table of a join."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:parent .
+    owl:subPropertyOf rml:parent .
 
 rr:parentTriplesMap a owl:ObjectProperty ;
     rdfs:label "parent triples map"@en ;
     rdfs:comment "Specifies the TriplesMap element corresponding to the parent logical table of the foreign key constraint."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:parentTriplesMap .
+    owl:subPropertyOf rml:parentTriplesMap .
 
 rr:predicate a owl:ObjectProperty ;
     rdfs:label "predicate"@en ;
     rdfs:comment "Specifies the predicate for the generated triple from the logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:predicate .
+    owl:subPropertyOf rml:predicate .
 
 rr:predicateMap a owl:ObjectProperty ;
     rdfs:label "predicate map"@en ;
     rdfs:comment "A PredicateMap element to generate the predicate component of the (predicate, object) pair from a logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:predicateMap .
+    owl:subPropertyOf rml:predicateMap .
 
 rr:predicateObjectMap a owl:ObjectProperty ;
     rdfs:label "predicate object map"@en ;
     rdfs:comment "A PredicateObjectMap element to generate (predicate, object) pair from a logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:predicate .
+    owl:subPropertyOf rml:predicateObjectMap .
 
 rr:sqlQuery a owl:DatatypeProperty ;
     rdfs:label "SQL query"@en ;
-    dcterms:isReplacedBy rml:query ;
     rdfs:comment "A valid SQL query."@en ;
-    rdfs:isDefinedBy rr: .
+    rdfs:isDefinedBy rr: ;
+    owl:subPropertyOf rml:iterator .
 
 rr:sqlVersion a owl:ObjectProperty ;
     rdfs:label "SQL version"@en ;
-    dcterms:isReplacedBy rml:referenceFormulation ;
     rdfs:comment "An identifier for a SQL version."@en ;
-    rdfs:isDefinedBy rr: .
+    rdfs:isDefinedBy rr: ;
+    owl:subPropertyOf rml:referenceFormulation .
 
 rr:subject a owl:ObjectProperty ;
     rdfs:label "subject"@en ;
     rdfs:comment "An IRI reference for use as subject for all the RDF triples generated from a logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:subjectMap .
+    owl:subPropertyOf rml:subject .
 
 rr:subjectMap a owl:ObjectProperty ;
     rdfs:label "subject map"@en ;
     rdfs:comment "A PredicateObjectMap element to generate (predicate, object) pair from a logical table row."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:subject .
+    owl:subPropertyOf rml:subjectMap .
 
 rr:tableName a owl:DatatypeProperty ;
     rdfs:label "table name"@en ;
-    dcterms:isReplacedBy rml:source ;
     rdfs:comment "Schema-qualified name of a table or view."@en ;
-    rdfs:isDefinedBy rr: .
+    rdfs:isDefinedBy rr: ;
+    owl:subPropertyOf rml:iterator .
+
+rr:template a owl:DatatypeProperty ;
+    rdfs:label "parent"@en ;
+    rdfs:comment "A template (format string) to specify how to generate a value for a subject, predicate, or object, using one or more columns from a logical table row."@en ;
+    rdfs:isDefinedBy rr: ;
+    owl:subPropertyOf rml:template .
 
 rr:termType a owl:ObjectProperty ;
     rdfs:label "term type"@en ;
     rdfs:comment "A string indicating whether subject or object generated using the value from column name specified for rr:column should be an IRI reference, blank node, or a literal."@en ;
     rdfs:isDefinedBy rr: ;
-    owl:equivalentProperty rml:termType .
+    owl:subPropertyOf rml:termType .
 
 foaf:name a owl:AnnotationProperty .
 
