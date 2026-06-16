@@ -113,11 +113,11 @@
         A field of the logical view join.
         """ ;
             sh:message """
-        At least one rml:field property must be specified for a rml:LogicalViewJoin, with a resource as its value.
+        At least one rml:field property must be specified for a rml:LogicalViewJoin, with a leaf expression field as its value.
         """ ;
             sh:minCount 1 ;
+            sh:node <http://w3id.org/rml/shapes/LeafExpressionFieldShape> ;
             sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:or ( [ sh:node <http://w3id.org/rml/shapes/ExpressionFieldShape> ] [ sh:node <http://w3id.org/rml/shapes/IterableFieldShape> ] ) ;
             sh:path rml:field ] ;
     sh:targetClass rml:LogicalViewJoin ;
     sh:targetObjectsOf rml:innerJoin,
@@ -883,6 +883,50 @@
     sh:targetClass rml:StructuralAnnotation ;
     sh:targetObjectsOf rml:structuralAnnotation .
 
+<http://w3id.org/rml/shapes/joinCyclesShape> a sh:NodeShape ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "There must be no cycles via rml:viewOn and rml:leftJoin or rml:innerJoin." ;
+            sh:select """
+            PREFIX rml: <http://w3id.org/rml/>
+            SELECT ?this
+            WHERE {
+              ?this a rml:LogicalView .
+              ?this ((rml:leftJoin|rml:innerJoin)/rml:parentLogicalView)+ ?this .
+            }
+        """ ] ;
+    sh:targetSubjectsOf rml:viewOn .
+
+<http://w3id.org/rml/shapes/parentCyclesShape> a sh:NodeShape ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+            sh:message "There must be no cycles via rml:viewOn or rml:Field." ;
+            sh:select """
+            PREFIX rml: <http://w3id.org/rml/>
+            SELECT ?this
+            WHERE {
+              ?this (rml:viewOn|rml:field)+ ?this .
+            }
+        """ ] ;
+    sh:targetSubjectsOf rml:field,
+        rml:viewOn .
+
+<http://w3id.org/rml/shapes/LeafExpressionFieldShape> a sh:NodeShape ;
+    rdfs:label "Leaf Expression Field" ;
+    rdfs:comment """
+    A leaf expression field is an expression field without nested fields.
+    """ ;
+    sh:message """
+    Node must have a valid rml:ExpressionField description.
+    """ ;
+    sh:node <http://w3id.org/rml/shapes/ExpressionFieldShape> ;
+    sh:property [ sh:description """
+        A leaf expression field is an expression field without nested fields.
+        """ ;
+            sh:maxCount 0 ;
+            sh:message """
+        A leaf expression field has no nested fields.
+        """ ;
+            sh:path rml:field ] .
+
 <http://w3id.org/rml/shapes/RMLAssertedTriplesMapShape> a sh:NodeShape ;
     rdfs:comment """
     Represents a Asserted Triples Map.
@@ -1158,6 +1202,39 @@
     sh:targetClass rml:Target ;
     sh:targetObjectsOf rml:target .
 
+<http://w3id.org/rml/shapes/IterableFieldShape> a sh:NodeShape ;
+    rdfs:label "Iterable Field" ;
+    rdfs:comment """
+    An iterable field is a construction that gives a name to logical iterations derived from the parent of the field.
+    """ ;
+    sh:message """
+    Node must have a valid rml:IterableField description.
+    rml:IterableField must have one or more rml:field properties.
+    Furthermore, rml:IterableField requires what an rml:Iterable and rml:Field requires.
+    """ ;
+    sh:node <http://w3id.org/rml/shapes/RMLIterableShape> ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description """
+        The name of the field.
+        """ ;
+            sh:maxCount 1 ;
+            sh:message """
+        Exactly one rml:fieldName property must be specified for a rml:Field, with a string as its value.
+        """ ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:path rml:fieldName ],
+        [ sh:description """
+        A child field of the iterable field.
+        """ ;
+            sh:message """
+        The value of a rml:field property for a rml:Field must be a resource that describes an rml:ExpressionField.
+        """ ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path rml:field ] ;
+    sh:targetClass rml:IterableField .
+
 <http://w3id.org/rml/shapes/RMLAbstractLogicalSourceShape> a sh:NodeShape ;
     rdfs:label "Abstract Logical Source" ;
     rdfs:comment """
@@ -1167,7 +1244,8 @@
     rml:AbstractLogicalSource must specify how to generate logical iterations on a data source for a triples map.
     """ ;
     sh:node <http://w3id.org/rml/shapes/RMLIterableShape> ;
-    sh:targetClass rml:AbstractLogicalSource .
+    sh:targetClass rml:AbstractLogicalSource ;
+    sh:targetObjectsOf rml:logicalSource .
 
 <http://w3id.org/rml/shapes/RMLGraphMapPropertiesShape> a sh:NodeShape ;
     sh:property [ rdfs:label "graph/graphMap" ;
@@ -1233,13 +1311,11 @@
         map the data of the input source. Depends on the reference formulation
         if an iterator is necessary.  
         """ ;
-            sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:message """
-        rml:iterator must be a Literal specifying the iterator to iterate over 
+        rml:iterator specifies the iterator to iterate over
         the data source, and may be provided at most once.
         """ ;
-            sh:nodeKind sh:Literal ;
             sh:path rml:iterator ] ;
     sh:targetClass rml:Iterable .
 
@@ -1317,39 +1393,6 @@
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:path rml:field ] ;
     sh:targetClass rml:ExpressionField .
-
-<http://w3id.org/rml/shapes/IterableFieldShape> a sh:NodeShape ;
-    rdfs:label "Iterable Field" ;
-    rdfs:comment """
-    An iterable field is a construction that gives a name to logical iterations derived from the parent of the field.
-    """ ;
-    sh:message """
-    Node must have a valid rml:IterableField description.
-    rml:IterableField must have one or more rml:field properties.
-    Furthermore, rml:IterableField requires what an rml:Iterable and rml:Field requires.
-    """ ;
-    sh:node <http://w3id.org/rml/shapes/RMLIterableShape> ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:description """
-        The name of the field.
-        """ ;
-            sh:maxCount 1 ;
-            sh:message """
-        Exactly one rml:fieldName property must be specified for a rml:Field, with a string as its value.
-        """ ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path rml:fieldName ],
-        [ sh:description """
-        A child field of the iterable field.
-        """ ;
-            sh:message """
-        The value of a rml:field property for a rml:Field must be a resource that describes an rml:ExpressionField.
-        """ ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path rml:field ] ;
-    sh:targetClass rml:IterableField .
 
 <http://w3id.org/rml/shapes/RMLTriplesMapPropertiesShape> a sh:NodeShape ;
     sh:property [ rdfs:label "logicalSource" ;
@@ -1429,44 +1472,31 @@
     Represents a Expression Map.
     """ ;
     sh:message """
-    Expression Map requires one rml:template or one rml:constant or one
+    Expression Map may require one rml:template or one rml:constant or one
     rml:reference.
     """ ;
-    sh:property [ rdfs:label "template/constant/reference/returnMap/functionExecution" ;
+    sh:or ( [ sh:not [ sh:property [ sh:minCount 1 ;
+                                sh:path rml:returnMap ] ] ] [ sh:property [ sh:maxCount 1 ;
+                        sh:minCount 1 ;
+                        sh:path rml:returnMap ],
+                    [ sh:maxCount 1 ;
+                        sh:minCount 1 ;
+                        sh:path rml:functionExecution ] ] ) ;
+    sh:property [ rdfs:label "template/constant/reference/functionExecution" ;
             rdfs:comment """
-        Exactly one rml:template, one rml:constant, one rml:reference,
-        one rml:returnMap, or one rml:functionExecution is required.
+            Only one rml:template, one rml:constant, one rml:reference,
+            or one rml:functionExecution is allowed. rml:returnMap is only allowed if rml:functionExecution is present.
         """ ;
             sh:maxCount 1 ;
             sh:message """
         Exactly one rml:template, one rml:constant, one rml:reference,
         one rml:returnMap, or one rml:functionExecution is required.
         """ ;
-            sh:minCount 1 ;
-            sh:path [ sh:alternativePath ( rml:template rml:constant rml:reference rml:returnMap rml:functionExecution ) ] ;
+            sh:path [ sh:alternativePath ( rml:template rml:constant rml:reference rml:functionExecution ) ] ;
             sh:targetSubjectsOf rml:constant,
                 rml:functionExecution,
                 rml:reference,
-                rml:returnMap,
                 rml:template ],
-        [ rdfs:label "reference" ;
-            rdfs:comment """
-        A reference rml:reference is used to refer to a column in case of 
-        databases, a record in case of CSV or TSV data source, an element in 
-        case of XML data source, an object in case of a JSON data source, etc.
-
-        A reference must be a valid identifier, considering the reference 
-        formulation (rml:referenceFormulation) specified. The reference can be
-        an absolute path, or a path relative to the iterator specified at the 
-        logical source. 
-        """ ;
-            sh:datatype xsd:string ;
-            sh:message """
-        rml:reference must be a string.
-        """ ;
-            sh:nodeKind sh:Literal ;
-            sh:path rml:reference ;
-            sh:targetSubjectsOf rml:reference ],
         [ rdfs:label "returnMap" ;
             rdfs:comment """
         A Return Map rml:returnMap is used to define the return values of a FnO
@@ -1514,7 +1544,25 @@
         rml:constant must be an IRI or Literal.
         """ ;
             sh:path rml:constant ;
-            sh:targetSubjectsOf rml:constant ] .
+            sh:targetSubjectsOf rml:constant ],
+        [ rdfs:label "reference" ;
+            rdfs:comment """
+        A reference rml:reference is used to refer to a column in case of 
+        databases, a record in case of CSV or TSV data source, an element in 
+        case of XML data source, an object in case of a JSON data source, etc.
+
+        A reference must be a valid identifier, considering the reference 
+        formulation (rml:referenceFormulation) specified. The reference can be
+        an absolute path, or a path relative to the iterator specified at the 
+        logical source. 
+        """ ;
+            sh:datatype xsd:string ;
+            sh:message """
+        rml:reference must be a string.
+        """ ;
+            sh:nodeKind sh:Literal ;
+            sh:path rml:reference ;
+            sh:targetSubjectsOf rml:reference ] .
 
 <http://w3id.org/rml/shapes/RMLTermMapShape> a sh:NodeShape ;
     rdfs:label "TermMap" ;
